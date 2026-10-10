@@ -64,6 +64,9 @@ Set `DJH_LOG_AI_PAYLOAD=1` in `supabase/functions/.env` to print exactly what is
 
 ## Deploy (demo)
 
+Step-by-step dashboard guide (Supabase + Vercel, no command line except the functions): **DEPLOY.md**. Short version:
+
+
 1. **Supabase project** (free tier): `npx supabase link --project-ref <ref>` → `npx supabase db push` → run `supabase/seed.sql` in the SQL editor (synthetic data) →
    `npx supabase secrets set ANTHROPIC_API_KEY=sk-ant-...` → `npx supabase functions deploy emergency-view summarize-record record-assistant`.
    In Auth settings keep sign-ups disabled (only seeded demo accounts).
