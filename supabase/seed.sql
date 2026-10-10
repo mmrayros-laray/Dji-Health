@@ -82,7 +82,8 @@ insert into public.vaccination_schedule (vaccine_code, vaccine_name, dose_number
 
 insert into public.program_parameters (key, value, unit) values
   ('anc_recommended_visits', 8, 'visites'),
-  ('min_cell_size', 5, 'personnes');
+  ('min_cell_size', 5, 'personnes'),
+  ('vaccine_overdue_grace_days', 28, 'jours');
 
 -- -----------------------------------------------------------------------------
 -- 20 detailed synthetic adults

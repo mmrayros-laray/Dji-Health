@@ -1,0 +1,448 @@
+{
+  "_meta": {
+    "language": "so",
+    "_review": "machine",
+    "note": "Machine-drafted. To be reviewed by native Somali speakers with health expertise (OPEN_QUESTIONS.md)."
+  },
+  "demo": {
+    "banner": "TIJAABO — xog been abuur ah",
+    "footer": "DjiHealth — nooc tijaabo ah · LARAY Strategic Advisory"
+  },
+  "setup": {
+    "title": "Habayn ayaa maqan",
+    "body": "Geli EXPO_PUBLIC_SUPABASE_URL iyo EXPO_PUBLIC_SUPABASE_ANON_KEY faylka .env.local (eeg README)."
+  },
+  "language": {
+    "choose": "Luqadda",
+    "machine_note": "Turjumaadda weli lama hubin."
+  },
+  "common": {
+    "back": "Dib u noqo",
+    "cancel": "Jooji",
+    "delete": "Tirtir",
+    "edit": "Wax ka beddel",
+    "save": "Kaydi",
+    "refresh": "Cusboonaysii",
+    "error": "Khalad ayaa dhacay",
+    "no_data": "Weli xog ma jirto.",
+    "offline": "Internet ma jiro — xogtii ugu dambeysay ee la kaydiyay (akhris keliya).",
+    "sign_out": "Ka bax",
+    "unknown": "lama yaqaan"
+  },
+  "home": {
+    "tagline": "Diiwaankaaga caafimaadka, meel kasta oo Jabuuti ah adiga kula jira.",
+    "privacy_title": "Tijaabo ammaan ah",
+    "privacy_body": "Dadka iyo xogta tijaabadan oo dhan waa been abuur. Mar kasta oo diiwaan la furo waa la qoraa.",
+    "start": "Bilow tijaabada",
+    "features": {
+      "vault": "Kayd caafimaad: xanuunada, xasaasiyadda, daawooyinka, tallaalada, booqashooyinka iyo dukumentiyada.",
+      "emergency": "Kaarka degdegga ah oo leh koodh QR, telefoon kasta akhrin karo.",
+      "maternal": "La socodka uurka iyo jadwalka tallaalka carruurta.",
+      "ai": "Soo koobid iyo kaaliye AI ah oo diiwaanka ku sharxa erayo fudud, aan weligood bixin talo caafimaad.",
+      "ministry": "Shaxda xogta guud ee Wasaaradda, iyadoo aan magacyo lahayn."
+    }
+  },
+  "signin": {
+    "title": "Akoonnada tijaabada",
+    "subtitle": "Taabo profile si aad u gasho.",
+    "error": "Lama geli karo",
+    "note": "Akoonno been abuur ah oo leh fure wadaag ah. Xog dhab ah ma jirto.",
+    "accounts": {
+      "amina": {
+        "name": "Amina",
+        "desc": "Bukaan, uur 24 toddobaad ah (Balbala)"
+      },
+      "fatouma": {
+        "name": "Fatouma",
+        "desc": "Bukaan, hooyo ilmo yar leh (Magaalada Jabuuti)"
+      },
+      "hassan": {
+        "name": "Dr Hassan",
+        "desc": "Dhakhtar — gelitaan ogolaanshaha bukaanka"
+      },
+      "ministry": {
+        "name": "Wasaaradda",
+        "desc": "Tilmaamayaal guud oo aan magac lahayn"
+      },
+      "admin": {
+        "name": "Maamulaha",
+        "desc": "Hubinta tayada AI (qoraallo la diiday)"
+      }
+    }
+  },
+  "tabs": {
+    "vault": "Diiwaanka",
+    "emergency": "Degdeg",
+    "maternal": "Qoyska",
+    "assistant": "Kaaliye",
+    "share": "La wadaag"
+  },
+  "sex": {
+    "female": "dheddig",
+    "male": "lab",
+    "other": "kale",
+    "unknown": "lama sheegin"
+  },
+  "sections": {
+    "conditions": "Xanuunada",
+    "allergies": "Xasaasiyadda",
+    "medications": "Daawooyinka",
+    "immunizations": "Tallaalada",
+    "encounters": "Booqashooyinka",
+    "documents": "Dukumentiyada",
+    "pregnancies": "Uurka",
+    "children": "Carruurta"
+  },
+  "source": {
+    "patient": "Bukaanku ayaa sheegay",
+    "professional": "Xirfadle ayaa geliyay"
+  },
+  "status": {
+    "active": "Socda",
+    "inactive": "Aan firfircoonayn",
+    "resolved": "Bogsaday",
+    "completed": "Dhammaaday",
+    "stopped": "La joojiyay"
+  },
+  "criticality": {
+    "low": "Xasaasiyad fudud",
+    "high": "Xasaasiyad culus",
+    "unable-to-assess": "Culeyska lama yaqaan"
+  },
+  "obs": {
+    "weight": "Miisaanka",
+    "height": "Dhererka",
+    "blood_pressure": "Cadaadiska dhiigga",
+    "hemoglobin": "Hemoglobin",
+    "glucose": "Sonkorta dhiigga",
+    "temperature": "Heerkulka",
+    "muac": "Wareegga gacanta"
+  },
+  "fields": {
+    "condition": "Xanuun",
+    "onset_date": "Laga bilaabo",
+    "date_hint": "Qaabka SSSS-BB-MM, tusaale 2026-03-15",
+    "status": "Xaaladda",
+    "substance": "Walaxda",
+    "reaction": "Falcelinta",
+    "criticality": "Culeyska",
+    "medication": "Daawo",
+    "dosage": "Sida loo qaato",
+    "vaccine": "Tallaal",
+    "date_given": "Taariikhda",
+    "dose_number": "Lambarka qiyaasta",
+    "reason": "Sababta",
+    "notes": "Qoraallo"
+  },
+  "vault": {
+    "title": "Diiwaankayga",
+    "photo_placeholder": "Sawir (meel bannaan)",
+    "age_one": "{{count}} sano",
+    "age_other": "{{count}} sano",
+    "blood_group": "Kooxda dhiigga",
+    "emergency_scanned": "Kaarkaaga degdegga waa la eegay",
+    "emergency_scanned_when": "Waxaa la eegay {{when}}. Haddii aysan ahayn xaalad degdeg ah, waad baajin kartaa kaarka.",
+    "summary_teaser": "Diiwaankaaga oo erayo fudud lagu sharaxay, luqaddaada.",
+    "open_summary": "Eeg soo koobiddayda",
+    "access_teaser_one": "{{count}} jeer ayaa qof kale eegay diiwaankaaga.",
+    "access_teaser_other": "{{count}} jeer ayaa dad kale eegeen diiwaankaaga.",
+    "open_access": "Yaa arkay diiwaankayga?",
+    "synthetic_note": "Qof been abuur ah — xog tijaabo.",
+    "add_item": "Ku dar",
+    "edit_item": "Wax ka beddel",
+    "empty": "Weli waxba lama diiwaangelin.",
+    "critical": "Muhiim xaaladda degdegga",
+    "since": "Laga bilaabo {{date}}",
+    "reaction": "Falcelinta",
+    "dose": "qiyaasta {{n}}",
+    "patient_reported_note": "Waxa aad ku darto waxaa lagu calaamadin doonaa \"bukaanku ayaa sheegay\"."
+  },
+  "documents": {
+    "upload_title": "Ku dar dukumenti",
+    "upload_hint": "Sawir ama PDF (natiijada baaritaanka, warqadda dhakhtarka…). Ugu badnaan 10 MB.",
+    "choose_file": "Dooro fayl",
+    "doc_title": "Cinwaanka",
+    "kind": "Nooca",
+    "kinds": {
+      "lab_result": "Natiijada shaybaarka",
+      "prescription": "Warqadda daawada",
+      "imaging": "Sawir caafimaad",
+      "report": "Warbixin",
+      "other": "Kale"
+    },
+    "upload": "Dir",
+    "open": "Fur",
+    "empty": "Dukumenti ma jiro."
+  },
+  "access": {
+    "title": "Gelitaanka diiwaankayga",
+    "subtitle": "Yaa eegay diiwaankaaga, goorma iyo sababta.",
+    "show_self": "Sidoo kale tus booqashooyinkayga",
+    "hide_self": "Qari booqashooyinkayga",
+    "empty": "Weli cidna ma eegin.",
+    "emergency_scanned": "Kaarkaaga degdegga waa la eegay",
+    "by_you": "Adiga",
+    "reason": "Sababta",
+    "flagged": "Gelitaan degdeg ah oo la calaamadeeyay",
+    "actions": {
+      "record_view": "Diiwaanka waa la eegay",
+      "emergency_access_denied": "Isku day kaar la baajiyay ama dhacay",
+      "emergency_card_created": "Kaarka degdegga waa la sameeyay",
+      "emergency_card_revoked": "Kaarka degdegga waa la baajiyay",
+      "consent_code_created": "Koodhka wadaagga waa la sameeyay",
+      "consent_granted": "Xirfadle ayaa la siiyay gelitaan",
+      "consent_revoked": "Gelitaanka waa laga qaaday",
+      "encounter_added": "Booqasho cusub ayaa lagu daray",
+      "ai_summary": "Soo koobid AI ah ayaa la sameeyay",
+      "ai_assistant": "Su'aal loo diray kaaliyaha AI"
+    },
+    "roles": {
+      "patient": "Bukaan",
+      "clinician": "Xirfadle caafimaad",
+      "emergency_scan": "Iskaanka kaarka degdegga",
+      "admin": "Maamule",
+      "system": "Nidaamka"
+    }
+  },
+  "emergency": {
+    "title": "Kaarka degdegga",
+    "subtitle": "Xaalad degdeg ah, shaqaale caafimaad ayaa koodhkan ku iskaanaya telefoon kasta.",
+    "card_title": "Kaarka degdegga",
+    "card_a11y": "Kaarka degdegga ee {{name}}, kooxda dhiigga {{blood}}, oo leh koodh QR",
+    "scan_me": "Iskaan garee xaalad degdeg ah",
+    "expires": "wuu shaqaynayaa ilaa {{date}}",
+    "none": "Weli kaar degdeg ah kuma lihid qalabkan.",
+    "active_elsewhere": "Kaar ayaa shaqaynaya (qalab kale lagu sameeyay). Halkan ku samee mid cusub si aad u aragto: kii hore waa la baajin doonaa.",
+    "generate": "Samee kaarkayga",
+    "regenerate": "Kaar cusub",
+    "revoke": "Baaji",
+    "print": "Daabac / soo dejiso",
+    "preview": "Eeg waxa shaqaalaha caafimaadku arko",
+    "privacy_title": "Waxa koodhku ka kooban yahay",
+    "privacy_body": "Koodhka QR kuma jirto xog caafimaad: kaliya link leh koodh sir ah oo random ah. Waad baajin kartaa wakhti kasta. Iskaan kasta waa la qoraa.",
+    "shows": "Shaqaalaha caafimaadku wuxuu arkaa oo keliya:",
+    "fields": {
+      "first_name": "Magaca koowaad",
+      "age": "Da'da",
+      "blood_group": "Kooxda dhiigga",
+      "allergies": "Xasaasiyad culus",
+      "conditions": "Xanuuno muhiim ah",
+      "medications": "Daawooyinka hadda",
+      "contact": "Qofka la wacayo"
+    },
+    "scan_history": "Taariikhda iskaanka",
+    "no_scans": "Weli iskaan ma jiro."
+  },
+  "ev": {
+    "title": "Macluumaadka degdegga",
+    "age_one": "{{count}} sano",
+    "age_other": "{{count}} sano",
+    "pregnant": "Uur leh",
+    "blood_group": "Kooxda dhiigga",
+    "unknown": "Lama yaqaan",
+    "allergies": "Xasaasiyad culus",
+    "conditions": "Xanuuno muhiim ah",
+    "medications": "Daawooyinka hadda",
+    "contact": "Qofka la wacayo",
+    "none": "Midna lama yaqaan",
+    "revoked": "Kaarka waa la baajiyay",
+    "expired": "Kaarka wuu dhacay",
+    "not_found": "Kaarka lama helin",
+    "logged": "Gelitaankan waa la qoray waxaana loo sheegayaa bukaanka.",
+    "demo_note": "TIJAABO — xog been abuur ah. Ha u isticmaalin daryeel dhab ah."
+  },
+  "maternal": {
+    "title": "Hooyo & ilmo",
+    "empty": "Ma jiro la socod uur ama carruur la diiwaangeliyay.",
+    "pregnancy": "Uurkayga",
+    "ga": "{{weeks}} toddobaad iyo {{days}} maalmood",
+    "trimester": "Saddexda bilood ee {{n}}",
+    "risk": {
+      "standard": "La socod caadi ah",
+      "high": "La socod dhow (kooxdu waxay u qaybisay khatar sare)"
+    },
+    "edd": "Taariikhda la filayo dhalmada: {{date}}",
+    "next_visit": "Booqashada xigta",
+    "next_visit_in_one": "{{count}} maalin kadib, {{date}}.",
+    "next_visit_in_other": "{{count}} maalmood kadib, {{date}}.",
+    "visits": "Booqashooyinka uurka",
+    "visits_progress": "{{done}} booqasho ayaa la sameeyay, {{total}} ayaa lagu taliyay",
+    "visit_n": "Booqasho {{n}}",
+    "week_n": "toddobaadka {{n}}",
+    "visit_status": {
+      "done": "la sameeyay",
+      "planned": "la qorsheeyay"
+    },
+    "weight_chart": "Isbeddelka miisaanka",
+    "weeks_axis": "Toddobaadyada uurka",
+    "measures": "Cabbiraadaha",
+    "notes": "Qoraalka xirfadlaha",
+    "planned_note": "Booqasho soo socota. Xirfadlaha ayaa ku dari doona cabbiraadaha."
+  },
+  "children": {
+    "title": "Carruurtayda",
+    "open": "Jadwalka tallaalka",
+    "age_months_one": "{{count}} bil",
+    "age_months_other": "{{count}} bilood",
+    "born": "Dhashay {{date}}",
+    "calendar": "Jadwalka tallaalka",
+    "schedule_source": "Jadwal tijaabo ah oo laga soo qaatay shaxda vaccination_schedule. {{note}}",
+    "status": {
+      "done": "La sameeyay",
+      "overdue": "Dib u dhacay",
+      "due": "Hadda la sameeyo",
+      "upcoming": "Soo socda"
+    },
+    "given_on": "La siiyay {{date}}",
+    "due_on": "Loo qorsheeyay {{date}} ({{weeks}} toddobaad)",
+    "next_vaccine": "Tallaalka xiga",
+    "due_now": "{{names}}: waa wakhtigii.",
+    "due_in_days_one": "{{names}} {{count}} maalin kadib.",
+    "due_in_days_other": "{{names}} {{count}} maalmood kadib.",
+    "due_in_weeks_one": "{{names}} {{count}} toddobaad kadib.",
+    "due_in_weeks_other": "{{names}} {{count}} toddobaad kadib.",
+    "overdue_title_one": "{{count}} tallaal ayaa dib u dhacay",
+    "overdue_title_other": "{{count}} tallaal ayaa dib u dhacay",
+    "overdue_body": "Ka sheeg booqashadaada xigta ee xarunta caafimaadka.",
+    "all_done": "Dhammaan tallaalada ilaa maanta la qorsheeyay waa la sameeyay.",
+    "growth": "Qalooca miisaanka",
+    "months_axis": "Da'da (bilo)",
+    "at_months_one": "{{count}} bil",
+    "at_months_other": "{{count}} bilood",
+    "no_reference": "Qaloocyada tixraaca waxaa lagu dari doonaa kadib hubinta"
+  },
+  "summary": {
+    "title": "Soo koobiddayda",
+    "subtitle": "Diiwaankaaga oo erayo fudud ah.",
+    "language": "Luqadda soo koobidda",
+    "ai_badge": "AI ayaa sameeyay",
+    "sources": "Halka ay macluumaadkani ka yimaadeen:",
+    "open_source": "Fur",
+    "generated_at": "La sameeyay {{date}}",
+    "how_title": "Sida loo ilaaliyo soo koobiddan",
+    "how": {
+      "only_record": "AI-du waxay dib u sheegtaa oo keliya waxa horay diiwaankaaga ugu jiray.",
+      "no_advice": "Weligeed ma bixiso baaritaan ama talo daaweyn.",
+      "deid": "Magacaaga, telefoonkaaga iyo taariikhda dhalashadaada weligood looma diro AI-da.",
+      "validator": "Hubin toos ah ayaa joojisa soo koobid kasta oo sheegta wax aan diiwaankaaga ku jirin."
+    }
+  },
+  "assistant": {
+    "title": "Kaaliyaha DjiHealth",
+    "subtitle": "Waxaan kaa caawiyaa inaad hesho macluumaadka diiwaankaaga.",
+    "disclaimer_title": "Ma aha dhakhtar",
+    "disclaimer": "Kaaliyuhu ma bixiyo baaritaan ama talo caafimaad. Wuxuu ku jawaabaa oo keliya macluumaadka diiwaankaaga. Xaalad degdeg ah, wac gargaarka degdegga.",
+    "try": "Isku day:",
+    "suggest": {
+      "allergies": "Waa maxay xasaasiyaddayda?",
+      "next_visit": "Goorma ayay tahay booqashadayda uurka ee xigta?",
+      "child_vaccines": "Waa maxay tallaalka xiga ee ilmahayga?",
+      "medications": "Daawooyinkee ayaan qaataa?",
+      "share": "Sideen diiwaankayga ula wadaagaa dhakhtar?",
+      "advice": "Ma joojin karaa daawadayda?"
+    },
+    "placeholder": "Su'aashaada qor…",
+    "send": "Dir",
+    "you": "Adiga",
+    "thinking": "Waxaan ka raadinayaa diiwaankaaga…",
+    "error": "Kaaliyuhu hadda ma shaqaynayo.",
+    "out_of_scope": "Su'aal caafimaad: weydii xirfadle caafimaad",
+    "blocked": "Jawaabta waxaa joojiyay hubinta ammaanka",
+    "open_screen": "Fur bogga"
+  },
+  "share": {
+    "title": "La wadaag diiwaankayga",
+    "subtitle": "Sii xirfadle caafimaad gelitaan ku meel gaar ah.",
+    "new_code": "Koodhka wadaagga",
+    "explain": "Tus xirfadlaha koodhkan (ama QR-ka). Wuxuu shaqaynayaa 24 saacadood, hal mar oo keliya. Gelitaanka waad ka qaadi kartaa wakhti kasta.",
+    "code_label": "Koodhka la bixinayo",
+    "valid_until": "Wuu shaqaynayaa ilaa {{date}}",
+    "generate": "Samee koodh",
+    "another_code": "Samee koodh kale",
+    "grants": "Gelitaannada la bixiyay",
+    "no_grants": "Gelitaan lama bixin.",
+    "waiting": "Waxaa la sugayaa xirfadlaha",
+    "granted_at": "La bixiyay {{date}}",
+    "created_at": "La sameeyay {{date}}",
+    "expires_at": "wuxuu dhacayaa {{date}}",
+    "revoke": "Ka qaad gelitaanka",
+    "status": {
+      "pending": "Koodhka lama isticmaalin",
+      "active": "Gelitaan firfircoon",
+      "expired": "Dhacay",
+      "revoked": "Laga qaaday"
+    }
+  },
+  "clinician": {
+    "title": "Qaybta xirfadlaha",
+    "subtitle": "Gelitaanka diiwaannada iyadoo bukaanku ogol yahay.",
+    "enter_code": "Koodhka bukaanka",
+    "enter_code_hint": "Bukaanku wuxuu koodh ka sameeyaa \"La wadaag diiwaankayga\".",
+    "code": "Koodh (8 xaraf)",
+    "reason": "Sababta gelitaanka",
+    "reason_hint": "Waa qasab. Waa la qoraa, bukaankuna wuu arkaa.",
+    "reasons": {
+      "consultation": "Baaritaan",
+      "antenatal": "Baaritaanka uurka",
+      "followup": "La socodka daaweynta",
+      "emergency": "Degdeg"
+    },
+    "open_record": "Fur diiwaanka",
+    "scan": "Iskaan garee QR-ka",
+    "camera_permission": "Kamerada waxaa loo isticmaalaa oo keliya akhrinta koodhka wadaagga.",
+    "allow_camera": "Oggolow kamerada",
+    "code_error": "Koodhka waa la diiday",
+    "my_patients": "Bukaannada leh gelitaan firfircoon",
+    "my_patients_hint": "Liisku wuu madhnaanayaa marka gelitaanku dhaco ama laga qaado.",
+    "no_patients": "Weli bukaan ma jiro.",
+    "rls_note": "Ogolaansho sax ah la'aanteed, xogta (database) way diidaysaa gelitaanka, shaashad kasta ha ahaatee.",
+    "reason_title": "Sababta gelitaanka",
+    "reason_required": "Sheeg sababta aad u furayso diiwaankan. Sababta waa la qoraa, bukaankuna wuu arkaa.",
+    "view_record": "Eeg diiwaanka",
+    "record": "Diiwaanka bukaanka",
+    "logged_reason": "Gelitaanka waa la qoray — sababta: {{reason}}",
+    "no_access": "Gelitaanka waa la diiday (ogolaansho ma jiro, wuu dhacay ama waa laga qaaday)",
+    "add_encounter": "Ku dar booqasho",
+    "save_encounter": "Kaydi booqashada",
+    "saved": "Booqashada waa la kaydiyay",
+    "saved_body": "Bukaanku isla markiiba wuu arkaa, oo lagu calaamadeeyay \"xirfadle ayaa geliyay\"."
+  },
+  "ministry": {
+    "title": "Shaxda qaranka",
+    "subtitle": "Tilmaamayaal guud oo aan magac lahayn.",
+    "synthetic": "Xog been abuur ah — tijaabo",
+    "synthetic_body": "Tirooyin dhab ah ma jiraan. Kooxaha ka yar 5 qof waa la qariyay (\"< 5\") si aan qofna loo aqoonsan.",
+    "filter_region": "Gobolka",
+    "all_regions": "Dhammaan gobollada",
+    "kpi": {
+      "enrolled": "Dadka diiwaangashan",
+      "pregnancies": "Uurarka la socda",
+      "anc": "La socod uur oo dhammaystiran"
+    },
+    "anc_rule": "Dhammaystiran = ugu yaraan {{n}} booqasho (qiime la hubin doono)",
+    "anc_progress": "{{complete}} ka mid ah {{eligible}} uur oo dhammaaday ({{pct}} %)",
+    "chart_label": "Xog been abuur ah — tijaabo",
+    "charts": {
+      "enrolled": "Diiwaangashanayaasha gobol kasta",
+      "coverage": "Baahinta tallaalka tallaal kasta",
+      "trimester": "Uurarka hadda socda saddexda bilood kasta",
+      "anc": "Uurarka leh la socod dhammaystiran",
+      "conditions": "5-ta xanuun ee joogtada ah ee ugu badan"
+    },
+    "coverage_note": "Carruurta ka yar 5 sano ee gaaray da'da qiyaasta (+4 toddobaad). Jadwal tijaabo ah oo la hubin doono.",
+    "suppressed_a11y": "ka yar 5, waa la qariyay",
+    "footer": "Kooxaha ka yar {{min}} waa la qariyay. La sameeyay {{date}}."
+  },
+  "admin": {
+    "title": "Hubinta AI",
+    "subtitle": "Qoraallada uu diiday hubiyuhu.",
+    "explain": "Qoraalladan weligood laguma tusin bukaannada. Waxaa loo isticmaalaa hagaajinta tilmaamaha AI-da.",
+    "empty": "Weli diidmo ma jirto.",
+    "draft": "Qoraal la diiday"
+  },
+  "charts": {
+    "tap_point": "Taabo bar si aad u akhrido qiimaha.",
+    "show_table": "Tus shaxda",
+    "hide_table": "Qari shaxda"
+  }
+}

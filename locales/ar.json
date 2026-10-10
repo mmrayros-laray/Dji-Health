@@ -1,0 +1,484 @@
+{
+  "_meta": {
+    "language": "ar",
+    "_review": "machine",
+    "note": "Machine-drafted. To be reviewed by native Arabic speakers with health expertise (OPEN_QUESTIONS.md)."
+  },
+  "demo": {
+    "banner": "عرض تجريبي — بيانات وهمية",
+    "footer": "DjiHealth — نموذج تجريبي · LARAY Strategic Advisory"
+  },
+  "setup": {
+    "title": "الإعداد غير مكتمل",
+    "body": "حدّد EXPO_PUBLIC_SUPABASE_URL و EXPO_PUBLIC_SUPABASE_ANON_KEY في ملف ‎.env.local (راجع README)."
+  },
+  "language": {
+    "choose": "اللغة",
+    "machine_note": "الترجمة قيد المراجعة."
+  },
+  "common": {
+    "back": "رجوع",
+    "cancel": "إلغاء",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "save": "حفظ",
+    "refresh": "تحديث",
+    "error": "حدث خطأ",
+    "no_data": "لا توجد بيانات بعد.",
+    "offline": "غير متصل — آخر بيانات محفوظة (للقراءة فقط).",
+    "sign_out": "تسجيل الخروج",
+    "unknown": "غير معروف"
+  },
+  "home": {
+    "tagline": "ملفك الصحي معك في كل مكان في جيبوتي.",
+    "privacy_title": "عرض تجريبي آمن",
+    "privacy_body": "جميع الأشخاص والبيانات في هذا العرض وهمية. يتم تسجيل كل اطلاع على أي ملف.",
+    "start": "ابدأ العرض التجريبي",
+    "features": {
+      "vault": "خزنة طبية: الأمراض، الحساسية، الأدوية، اللقاحات، الزيارات والمستندات.",
+      "emergency": "بطاقة طوارئ برمز QR يمكن لأي هاتف قراءتها.",
+      "maternal": "متابعة الحمل وجدول تطعيم الأطفال.",
+      "ai": "ملخص ومساعد بالذكاء الاصطناعي يشرحان الملف بكلمات بسيطة دون تقديم أي نصيحة طبية.",
+      "ministry": "لوحة مؤشرات مجهولة الهوية للوزارة."
+    }
+  },
+  "signin": {
+    "title": "حسابات العرض التجريبي",
+    "subtitle": "المس ملفًا شخصيًا لتسجيل الدخول.",
+    "error": "تعذّر تسجيل الدخول",
+    "note": "حسابات وهمية بكلمة مرور مشتركة للعرض. لا توجد بيانات حقيقية.",
+    "accounts": {
+      "amina": {
+        "name": "أمينة",
+        "desc": "مريضة، حامل في الأسبوع 24 (بلبلا)"
+      },
+      "fatouma": {
+        "name": "فاطمة",
+        "desc": "مريضة، أم لطفل صغير (مدينة جيبوتي)"
+      },
+      "hassan": {
+        "name": "د. حسن",
+        "desc": "طبيب — وصول بموافقة المريض"
+      },
+      "ministry": {
+        "name": "الوزارة",
+        "desc": "مؤشرات مجمّعة ومجهولة الهوية"
+      },
+      "admin": {
+        "name": "المسؤول",
+        "desc": "مراقبة جودة الذكاء الاصطناعي (مسودات مرفوضة)"
+      }
+    }
+  },
+  "tabs": {
+    "vault": "الملف",
+    "emergency": "الطوارئ",
+    "maternal": "العائلة",
+    "assistant": "المساعد",
+    "share": "مشاركة"
+  },
+  "sex": {
+    "female": "أنثى",
+    "male": "ذكر",
+    "other": "آخر",
+    "unknown": "غير محدد"
+  },
+  "sections": {
+    "conditions": "الأمراض",
+    "allergies": "الحساسية",
+    "medications": "الأدوية",
+    "immunizations": "اللقاحات",
+    "encounters": "الزيارات",
+    "documents": "المستندات",
+    "pregnancies": "الحمل",
+    "children": "الأطفال"
+  },
+  "source": {
+    "patient": "أدخله المريض",
+    "professional": "أدخله أخصائي صحي"
+  },
+  "status": {
+    "active": "جارٍ",
+    "inactive": "غير نشط",
+    "resolved": "شُفي",
+    "completed": "انتهى",
+    "stopped": "متوقف"
+  },
+  "criticality": {
+    "low": "حساسية خفيفة",
+    "high": "حساسية شديدة",
+    "unable-to-assess": "الشدة غير معروفة"
+  },
+  "obs": {
+    "weight": "الوزن",
+    "height": "الطول",
+    "blood_pressure": "ضغط الدم",
+    "hemoglobin": "الهيموغلوبين",
+    "glucose": "سكر الدم",
+    "temperature": "الحرارة",
+    "muac": "محيط الذراع"
+  },
+  "fields": {
+    "condition": "المرض",
+    "onset_date": "منذ",
+    "date_hint": "الصيغة YYYY-MM-DD، مثلاً 2026-03-15",
+    "status": "الحالة",
+    "substance": "المادة",
+    "reaction": "رد الفعل",
+    "criticality": "الشدة",
+    "medication": "الدواء",
+    "dosage": "طريقة الاستعمال",
+    "vaccine": "اللقاح",
+    "date_given": "التاريخ",
+    "dose_number": "رقم الجرعة",
+    "reason": "السبب",
+    "notes": "ملاحظات"
+  },
+  "vault": {
+    "title": "ملفي",
+    "photo_placeholder": "صورة (مكان مخصص)",
+    "age_one": "{{count}} سنة",
+    "age_other": "{{count}} سنة",
+    "blood_group": "فصيلة الدم",
+    "emergency_scanned": "تم الاطلاع على بطاقة الطوارئ الخاصة بك",
+    "emergency_scanned_when": "تم الاطلاع في {{when}}. إذا لم تكن حالة طارئة، يمكنك إلغاء البطاقة.",
+    "summary_teaser": "ملفك مشروح بكلمات بسيطة وبلغتك.",
+    "open_summary": "عرض ملخصي",
+    "access_teaser_one": "اطلاع واحد على ملفك من شخص آخر.",
+    "access_teaser_other": "{{count}} اطلاع على ملفك من أشخاص آخرين.",
+    "open_access": "من اطلع على ملفي؟",
+    "synthetic_note": "شخص وهمي — بيانات تجريبية.",
+    "add_item": "إضافة",
+    "edit_item": "تعديل",
+    "empty": "لا شيء مسجّل حتى الآن.",
+    "critical": "مهم في حالات الطوارئ",
+    "since": "منذ {{date}}",
+    "reaction": "رد الفعل",
+    "dose": "الجرعة {{n}}",
+    "patient_reported_note": "ما تضيفه سيُعلَّم بعبارة «أدخله المريض».",
+    "age_zero": "{{count}} سنة",
+    "age_two": "{{count}} سنة",
+    "age_few": "{{count}} سنة",
+    "age_many": "{{count}} سنة",
+    "access_teaser_zero": "{{count}} اطلاع على ملفك من أشخاص آخرين.",
+    "access_teaser_two": "{{count}} اطلاع على ملفك من أشخاص آخرين.",
+    "access_teaser_few": "{{count}} اطلاع على ملفك من أشخاص آخرين.",
+    "access_teaser_many": "{{count}} اطلاع على ملفك من أشخاص آخرين."
+  },
+  "documents": {
+    "upload_title": "إضافة مستند",
+    "upload_hint": "صورة أو PDF (نتيجة تحليل، وصفة…). 10 ميغابايت كحد أقصى.",
+    "choose_file": "اختيار ملف",
+    "doc_title": "العنوان",
+    "kind": "النوع",
+    "kinds": {
+      "lab_result": "نتيجة تحليل",
+      "prescription": "وصفة طبية",
+      "imaging": "تصوير طبي",
+      "report": "تقرير",
+      "other": "أخرى"
+    },
+    "upload": "إرسال",
+    "open": "فتح",
+    "empty": "لا توجد مستندات."
+  },
+  "access": {
+    "title": "الاطلاع على ملفي",
+    "subtitle": "من اطلع على ملفك، ومتى، ولماذا.",
+    "show_self": "عرض اطلاعاتي أيضًا",
+    "hide_self": "إخفاء اطلاعاتي",
+    "empty": "لا يوجد اطلاع حتى الآن.",
+    "emergency_scanned": "تم الاطلاع على بطاقة الطوارئ الخاصة بك",
+    "by_you": "أنت",
+    "reason": "السبب",
+    "flagged": "وصول طارئ مُبلَّغ عنه",
+    "actions": {
+      "record_view": "تم الاطلاع على الملف",
+      "emergency_access_denied": "محاولة ببطاقة ملغاة أو منتهية",
+      "emergency_card_created": "تم إنشاء بطاقة الطوارئ",
+      "emergency_card_revoked": "تم إلغاء بطاقة الطوارئ",
+      "consent_code_created": "تم إنشاء رمز المشاركة",
+      "consent_granted": "تم منح الوصول لأخصائي صحي",
+      "consent_revoked": "تم سحب الوصول",
+      "encounter_added": "تمت إضافة زيارة جديدة",
+      "ai_summary": "تم إنشاء ملخص بالذكاء الاصطناعي",
+      "ai_assistant": "سؤال إلى المساعد الذكي"
+    },
+    "roles": {
+      "patient": "مريض",
+      "clinician": "أخصائي صحي",
+      "emergency_scan": "مسح بطاقة الطوارئ",
+      "admin": "مسؤول",
+      "system": "النظام"
+    }
+  },
+  "emergency": {
+    "title": "بطاقة الطوارئ",
+    "subtitle": "في حالة الطوارئ، يمسح العامل الصحي هذا الرمز بأي هاتف.",
+    "card_title": "بطاقة الطوارئ",
+    "card_a11y": "بطاقة طوارئ {{name}}، فصيلة الدم {{blood}}، مع رمز QR",
+    "scan_me": "امسح الرمز في حالة الطوارئ",
+    "expires": "صالحة حتى {{date}}",
+    "none": "ليست لديك بطاقة طوارئ على هذا الجهاز بعد.",
+    "active_elsewhere": "توجد بطاقة نشطة (أُنشئت على جهاز آخر). أنشئ بطاقة جديدة هنا لعرضها: سيتم إلغاء القديمة.",
+    "generate": "إنشاء بطاقتي",
+    "regenerate": "بطاقة جديدة",
+    "revoke": "إلغاء",
+    "print": "طباعة / تنزيل",
+    "preview": "عرض ما يراه العامل الصحي",
+    "privacy_title": "ما يحتويه الرمز",
+    "privacy_body": "لا يحتوي رمز QR على أي بيانات طبية: فقط رابط برمز سري عشوائي. يمكنك إلغاؤه في أي وقت. يتم تسجيل كل مسح.",
+    "shows": "لا يرى العامل الصحي إلا:",
+    "fields": {
+      "first_name": "الاسم الأول",
+      "age": "العمر",
+      "blood_group": "فصيلة الدم",
+      "allergies": "الحساسية الشديدة",
+      "conditions": "الأمراض المهمة",
+      "medications": "الأدوية الحالية",
+      "contact": "الشخص الذي يُتصل به"
+    },
+    "scan_history": "سجل المسح",
+    "no_scans": "لا يوجد مسح حتى الآن."
+  },
+  "ev": {
+    "title": "معلومات الطوارئ",
+    "age_one": "{{count}} سنة",
+    "age_other": "{{count}} سنة",
+    "pregnant": "حامل",
+    "blood_group": "فصيلة الدم",
+    "unknown": "غير معروفة",
+    "allergies": "الحساسية الشديدة",
+    "conditions": "الأمراض المهمة",
+    "medications": "الأدوية الحالية",
+    "contact": "الشخص الذي يُتصل به",
+    "none": "لا شيء معروف",
+    "revoked": "البطاقة ملغاة",
+    "expired": "البطاقة منتهية الصلاحية",
+    "not_found": "البطاقة غير موجودة",
+    "logged": "تم تسجيل هذا الاطلاع وإبلاغ المريض به.",
+    "demo_note": "عرض تجريبي — بيانات وهمية. لا تُستخدم لرعاية حقيقية.",
+    "age_zero": "{{count}} سنة",
+    "age_two": "{{count}} سنة",
+    "age_few": "{{count}} سنة",
+    "age_many": "{{count}} سنة"
+  },
+  "maternal": {
+    "title": "الأم والطفل",
+    "empty": "لا توجد متابعة حمل أو أطفال مسجلون.",
+    "pregnancy": "حملي",
+    "ga": "{{weeks}} أسبوعًا و{{days}} أيام",
+    "trimester": "الثلث {{n}}",
+    "risk": {
+      "standard": "متابعة عادية",
+      "high": "متابعة مكثفة (صنّفها الفريق عالية الخطورة)"
+    },
+    "edd": "الموعد المتوقع للولادة: {{date}}",
+    "next_visit": "الزيارة القادمة",
+    "next_visit_in_one": "بعد يوم واحد، في {{date}}.",
+    "next_visit_in_other": "بعد {{count}} يومًا، في {{date}}.",
+    "visits": "زيارات ما قبل الولادة",
+    "visits_progress": "{{done}} زيارات تمت من أصل {{total}} موصى بها",
+    "visit_n": "الزيارة {{n}}",
+    "week_n": "الأسبوع {{n}}",
+    "visit_status": {
+      "done": "تمت",
+      "planned": "مقررة"
+    },
+    "weight_chart": "تطور الوزن",
+    "weeks_axis": "أسابيع الحمل",
+    "measures": "القياسات",
+    "notes": "ملاحظات الأخصائي",
+    "planned_note": "زيارة قادمة. سيضيف الأخصائي القياسات.",
+    "next_visit_in_zero": "بعد {{count}} يومًا، في {{date}}.",
+    "next_visit_in_two": "بعد {{count}} يومًا، في {{date}}.",
+    "next_visit_in_few": "بعد {{count}} يومًا، في {{date}}.",
+    "next_visit_in_many": "بعد {{count}} يومًا، في {{date}}."
+  },
+  "children": {
+    "title": "أطفالي",
+    "open": "جدول اللقاحات",
+    "age_months_one": "شهر واحد",
+    "age_months_other": "{{count}} شهرًا",
+    "born": "وُلد في {{date}}",
+    "calendar": "جدول اللقاحات",
+    "schedule_source": "جدول إرشادي تجريبي مأخوذ من جدول vaccination_schedule. {{note}}",
+    "status": {
+      "done": "تم",
+      "overdue": "متأخر",
+      "due": "حان موعده",
+      "upcoming": "قادم"
+    },
+    "given_on": "أُعطي في {{date}}",
+    "due_on": "مقرر في {{date}} (عند {{weeks}} أسبوعًا)",
+    "next_vaccine": "اللقاح القادم",
+    "due_now": "{{names}}: حان الوقت.",
+    "due_in_days_one": "{{names}} بعد يوم واحد.",
+    "due_in_days_other": "{{names}} بعد {{count}} يومًا.",
+    "due_in_weeks_one": "{{names}} بعد أسبوع واحد.",
+    "due_in_weeks_other": "{{names}} بعد {{count}} أسابيع.",
+    "overdue_title_one": "لقاح واحد متأخر",
+    "overdue_title_other": "{{count}} لقاحات متأخرة",
+    "overdue_body": "تحدّث عن ذلك في زيارتك القادمة للمركز الصحي.",
+    "all_done": "تم إعطاء جميع اللقاحات المقررة حتى اليوم.",
+    "growth": "منحنى الوزن",
+    "months_axis": "العمر (بالأشهر)",
+    "at_months_one": "عند شهر واحد",
+    "at_months_other": "عند {{count}} شهرًا",
+    "no_reference": "ستُضاف المنحنيات المرجعية بعد المصادقة",
+    "age_months_zero": "{{count}} شهرًا",
+    "age_months_two": "{{count}} شهرًا",
+    "age_months_few": "{{count}} شهرًا",
+    "age_months_many": "{{count}} شهرًا",
+    "due_in_days_zero": "{{names}} بعد {{count}} يومًا.",
+    "due_in_days_two": "{{names}} بعد {{count}} يومًا.",
+    "due_in_days_few": "{{names}} بعد {{count}} يومًا.",
+    "due_in_days_many": "{{names}} بعد {{count}} يومًا.",
+    "due_in_weeks_zero": "{{names}} بعد {{count}} أسابيع.",
+    "due_in_weeks_two": "{{names}} بعد {{count}} أسابيع.",
+    "due_in_weeks_few": "{{names}} بعد {{count}} أسابيع.",
+    "due_in_weeks_many": "{{names}} بعد {{count}} أسابيع.",
+    "overdue_title_zero": "{{count}} لقاحات متأخرة",
+    "overdue_title_two": "{{count}} لقاحات متأخرة",
+    "overdue_title_few": "{{count}} لقاحات متأخرة",
+    "overdue_title_many": "{{count}} لقاحات متأخرة",
+    "at_months_zero": "عند {{count}} شهرًا",
+    "at_months_two": "عند {{count}} شهرًا",
+    "at_months_few": "عند {{count}} شهرًا",
+    "at_months_many": "عند {{count}} شهرًا"
+  },
+  "summary": {
+    "title": "ملخصي",
+    "subtitle": "ملفك بكلمات بسيطة.",
+    "language": "لغة الملخص",
+    "ai_badge": "مُنشأ بالذكاء الاصطناعي",
+    "sources": "من أين تأتي هذه المعلومات:",
+    "open_source": "فتح",
+    "generated_at": "أُنشئ في {{date}}",
+    "how_title": "كيف يُحمى هذا الملخص",
+    "how": {
+      "only_record": "يعيد الذكاء الاصطناعي صياغة ما هو موجود في ملفك فقط.",
+      "no_advice": "لا يقدّم أبدًا تشخيصًا أو نصيحة علاجية.",
+      "deid": "لا يُرسل اسمك ولا هاتفك ولا تاريخ ميلادك أبدًا إلى الذكاء الاصطناعي.",
+      "validator": "يمنع فحص آلي أي ملخص يذكر شيئًا غير موجود في ملفك."
+    }
+  },
+  "assistant": {
+    "title": "مساعد DjiHealth",
+    "subtitle": "أساعدك في العثور على المعلومات في ملفك.",
+    "disclaimer_title": "ليس طبيبًا",
+    "disclaimer": "لا يقدّم المساعد تشخيصًا ولا نصيحة طبية. يجيب فقط بالمعلومات الموجودة في ملفك. في حالة الطوارئ، اتصل بالإسعاف.",
+    "try": "جرّب:",
+    "suggest": {
+      "allergies": "ما هي الحساسية لدي؟",
+      "next_visit": "متى زيارتي القادمة لمتابعة الحمل؟",
+      "child_vaccines": "ما هو اللقاح القادم لطفلي؟",
+      "medications": "ما الأدوية التي أتناولها؟",
+      "share": "كيف أشارك ملفي مع طبيب؟",
+      "advice": "هل يمكنني إيقاف علاجي؟"
+    },
+    "placeholder": "اكتب سؤالك…",
+    "send": "إرسال",
+    "you": "أنت",
+    "thinking": "أبحث في ملفك…",
+    "error": "المساعد غير متاح حاليًا.",
+    "out_of_scope": "سؤال طبي: اطرحه على أخصائي صحي",
+    "blocked": "تم حجب الإجابة بواسطة فحص الأمان",
+    "open_screen": "فتح الصفحة"
+  },
+  "share": {
+    "title": "مشاركة ملفي",
+    "subtitle": "امنح أخصائيًا صحيًا وصولًا مؤقتًا.",
+    "new_code": "رمز المشاركة",
+    "explain": "أظهر هذا الرمز (أو رمز QR) للأخصائي. صالح لمدة 24 ساعة ولمرة واحدة. يمكنك سحب الوصول في أي وقت.",
+    "code_label": "الرمز الذي تعطيه",
+    "valid_until": "صالح حتى {{date}}",
+    "generate": "إنشاء رمز",
+    "another_code": "إنشاء رمز آخر",
+    "grants": "الوصول الممنوح",
+    "no_grants": "لم يُمنح أي وصول.",
+    "waiting": "بانتظار الأخصائي",
+    "granted_at": "مُنح في {{date}}",
+    "created_at": "أُنشئ في {{date}}",
+    "expires_at": "ينتهي في {{date}}",
+    "revoke": "سحب الوصول",
+    "status": {
+      "pending": "رمز غير مستخدم",
+      "active": "وصول نشط",
+      "expired": "منتهٍ",
+      "revoked": "مسحوب"
+    }
+  },
+  "clinician": {
+    "title": "فضاء الأخصائيين",
+    "subtitle": "الوصول إلى الملفات بموافقة المريض.",
+    "enter_code": "رمز المريض",
+    "enter_code_hint": "ينشئ المريض رمزًا من «مشاركة ملفي».",
+    "code": "الرمز (8 أحرف)",
+    "reason": "سبب الوصول",
+    "reason_hint": "إلزامي. يُسجَّل ويراه المريض.",
+    "reasons": {
+      "consultation": "استشارة",
+      "antenatal": "استشارة ما قبل الولادة",
+      "followup": "متابعة العلاج",
+      "emergency": "طوارئ"
+    },
+    "open_record": "فتح الملف",
+    "scan": "مسح رمز QR",
+    "camera_permission": "تُستخدم الكاميرا فقط لقراءة رمز المشاركة.",
+    "allow_camera": "السماح بالكاميرا",
+    "code_error": "الرمز مرفوض",
+    "my_patients": "مرضى لديهم وصول نشط",
+    "my_patients_hint": "تُفرغ القائمة بمجرد انتهاء الوصول أو سحبه.",
+    "no_patients": "لا يوجد مرضى بعد.",
+    "rls_note": "بدون موافقة صالحة، ترفض قاعدة البيانات الوصول (أمان على مستوى الصفوف) مهما كانت الشاشة.",
+    "reason_title": "سبب الوصول",
+    "reason_required": "اذكر سبب فتحك لهذا الملف. يُسجَّل السبب ويراه المريض.",
+    "view_record": "عرض الملف",
+    "record": "ملف المريض",
+    "logged_reason": "تم تسجيل الوصول — السبب: {{reason}}",
+    "no_access": "الوصول مرفوض (الموافقة غير موجودة أو منتهية أو مسحوبة)",
+    "add_encounter": "إضافة زيارة",
+    "save_encounter": "حفظ الزيارة",
+    "saved": "تم حفظ الزيارة",
+    "saved_body": "يراها المريض فورًا، مُعلَّمة بعبارة «أدخله أخصائي صحي»."
+  },
+  "ministry": {
+    "title": "لوحة المؤشرات الوطنية",
+    "subtitle": "مؤشرات مجمّعة ومجهولة الهوية.",
+    "synthetic": "بيانات وهمية — عرض تجريبي",
+    "synthetic_body": "لا توجد أرقام حقيقية. تُخفى المجموعات التي تقل عن 5 أشخاص («< 5») لمنع إعادة التعرف على الهوية.",
+    "filter_region": "المنطقة",
+    "all_regions": "جميع المناطق",
+    "kpi": {
+      "enrolled": "الأشخاص المسجلون",
+      "pregnancies": "حالات الحمل المتابَعة",
+      "anc": "متابعة حمل مكتملة"
+    },
+    "anc_rule": "مكتملة = {{n}} زيارات على الأقل (قيمة بحاجة إلى مصادقة)",
+    "anc_progress": "{{complete}} من {{eligible}} حالة حمل منتهية ({{pct}} %)",
+    "chart_label": "بيانات وهمية — عرض تجريبي",
+    "charts": {
+      "enrolled": "المسجلون حسب المنطقة",
+      "coverage": "التغطية بالتطعيم حسب اللقاح",
+      "trimester": "حالات الحمل الجارية حسب الثلث",
+      "anc": "حالات الحمل بمتابعة مكتملة",
+      "conditions": "الأمراض المزمنة الخمسة الأكثر شيوعًا"
+    },
+    "coverage_note": "الأطفال دون 5 سنوات الذين بلغوا عمر الجرعة (+4 أسابيع). جدول إرشادي بحاجة إلى مصادقة.",
+    "suppressed_a11y": "أقل من 5، مخفي",
+    "footer": "تُخفى المجموعات الأصغر من {{min}}. أُنشئ في {{date}}."
+  },
+  "admin": {
+    "title": "مراقبة الذكاء الاصطناعي",
+    "subtitle": "مسودات رفضها المدقق.",
+    "explain": "لم تُعرض هذه النصوص على المرضى أبدًا. تُستخدم لتحسين تعليمات الذكاء الاصطناعي.",
+    "empty": "لا يوجد رفض حتى الآن.",
+    "draft": "مسودة مرفوضة"
+  },
+  "charts": {
+    "tap_point": "المس نقطة لقراءة قيمتها.",
+    "show_table": "عرض الجدول",
+    "hide_table": "إخفاء الجدول"
+  }
+}

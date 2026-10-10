@@ -1,0 +1,448 @@
+{
+  "_meta": {
+    "language": "fr",
+    "_review": "human",
+    "note": "Langue de référence. Toute nouvelle chaîne est écrite d'abord en français."
+  },
+  "demo": {
+    "banner": "DÉMO — données fictives",
+    "footer": "DjiHealth — prototype de démonstration · LARAY Strategic Advisory"
+  },
+  "setup": {
+    "title": "Configuration manquante",
+    "body": "Définissez EXPO_PUBLIC_SUPABASE_URL et EXPO_PUBLIC_SUPABASE_ANON_KEY dans .env.local (voir README)."
+  },
+  "language": {
+    "choose": "Langue",
+    "machine_note": "Traduction en cours de validation."
+  },
+  "common": {
+    "back": "Retour",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "save": "Enregistrer",
+    "refresh": "Actualiser",
+    "error": "Une erreur est survenue",
+    "no_data": "Pas encore de données.",
+    "offline": "Hors ligne — dernières données enregistrées (lecture seule).",
+    "sign_out": "Se déconnecter",
+    "unknown": "inconnu"
+  },
+  "home": {
+    "tagline": "Votre dossier de santé, avec vous partout à Djibouti.",
+    "privacy_title": "Démonstration sécurisée",
+    "privacy_body": "Toutes les personnes et données de cette démonstration sont fictives. Chaque consultation d'un dossier est enregistrée.",
+    "start": "Commencer la démo",
+    "features": {
+      "vault": "Un coffre-fort médical : maladies, allergies, traitements, vaccins, visites et documents.",
+      "emergency": "Une carte d'urgence avec code QR, lisible par n'importe quel téléphone.",
+      "maternal": "Le suivi de grossesse et le calendrier vaccinal des enfants.",
+      "ai": "Un résumé et un assistant IA qui expliquent le dossier en mots simples, sans jamais donner d'avis médical.",
+      "ministry": "Un tableau de bord anonymisé pour le Ministère."
+    }
+  },
+  "signin": {
+    "title": "Comptes de démonstration",
+    "subtitle": "Touchez un profil pour vous connecter.",
+    "error": "Connexion impossible",
+    "note": "Comptes fictifs, mot de passe commun de démonstration. Aucune donnée réelle.",
+    "accounts": {
+      "amina": {
+        "name": "Amina",
+        "desc": "Patiente, enceinte de 24 semaines (Balbala)"
+      },
+      "fatouma": {
+        "name": "Fatouma",
+        "desc": "Patiente, mère d'un jeune enfant (Djibouti-Ville)"
+      },
+      "hassan": {
+        "name": "Dr Hassan",
+        "desc": "Médecin — accès avec le consentement du patient"
+      },
+      "ministry": {
+        "name": "Ministère",
+        "desc": "Indicateurs agrégés et anonymisés"
+      },
+      "admin": {
+        "name": "Administrateur",
+        "desc": "Contrôle qualité de l'IA (brouillons rejetés)"
+      }
+    }
+  },
+  "tabs": {
+    "vault": "Dossier",
+    "emergency": "Urgence",
+    "maternal": "Famille",
+    "assistant": "Assistant",
+    "share": "Partager"
+  },
+  "sex": {
+    "female": "femme",
+    "male": "homme",
+    "other": "autre",
+    "unknown": "non précisé"
+  },
+  "sections": {
+    "conditions": "Maladies",
+    "allergies": "Allergies",
+    "medications": "Médicaments",
+    "immunizations": "Vaccins",
+    "encounters": "Visites",
+    "documents": "Documents",
+    "pregnancies": "Grossesse",
+    "children": "Enfants"
+  },
+  "source": {
+    "patient": "Déclaré par le patient",
+    "professional": "Saisi par un professionnel"
+  },
+  "status": {
+    "active": "En cours",
+    "inactive": "Inactive",
+    "resolved": "Guérie",
+    "completed": "Terminé",
+    "stopped": "Arrêté"
+  },
+  "criticality": {
+    "low": "Allergie légère",
+    "high": "Allergie grave",
+    "unable-to-assess": "Gravité inconnue"
+  },
+  "obs": {
+    "weight": "Poids",
+    "height": "Taille",
+    "blood_pressure": "Tension",
+    "hemoglobin": "Hémoglobine",
+    "glucose": "Glycémie",
+    "temperature": "Température",
+    "muac": "Périmètre brachial"
+  },
+  "fields": {
+    "condition": "Maladie",
+    "onset_date": "Depuis le",
+    "date_hint": "Format AAAA-MM-JJ, par exemple 2026-03-15",
+    "status": "État",
+    "substance": "Substance",
+    "reaction": "Réaction",
+    "criticality": "Gravité",
+    "medication": "Médicament",
+    "dosage": "Comment le prendre",
+    "vaccine": "Vaccin",
+    "date_given": "Date",
+    "dose_number": "Numéro de dose",
+    "reason": "Motif",
+    "notes": "Notes"
+  },
+  "vault": {
+    "title": "Mon dossier",
+    "photo_placeholder": "Photo (emplacement)",
+    "age_one": "{{count}} an",
+    "age_other": "{{count}} ans",
+    "blood_group": "Groupe sanguin",
+    "emergency_scanned": "Votre carte d'urgence a été consultée",
+    "emergency_scanned_when": "Consultation le {{when}}. Si ce n'était pas une urgence, vous pouvez révoquer la carte.",
+    "summary_teaser": "Votre dossier expliqué en mots simples, dans votre langue.",
+    "open_summary": "Voir mon résumé",
+    "access_teaser_one": "{{count}} consultation de votre dossier par une autre personne.",
+    "access_teaser_other": "{{count}} consultations de votre dossier par d'autres personnes.",
+    "open_access": "Qui a vu mon dossier ?",
+    "synthetic_note": "Personne fictive — données de démonstration.",
+    "add_item": "Ajouter",
+    "edit_item": "Modifier",
+    "empty": "Rien d'enregistré pour le moment.",
+    "critical": "Important en urgence",
+    "since": "Depuis le {{date}}",
+    "reaction": "Réaction",
+    "dose": "dose {{n}}",
+    "patient_reported_note": "Ce que vous ajoutez sera marqué « déclaré par le patient »."
+  },
+  "documents": {
+    "upload_title": "Ajouter un document",
+    "upload_hint": "Photo ou PDF (résultat d'analyse, ordonnance…). 10 Mo maximum.",
+    "choose_file": "Choisir un fichier",
+    "doc_title": "Titre",
+    "kind": "Type",
+    "kinds": {
+      "lab_result": "Résultat d'analyse",
+      "prescription": "Ordonnance",
+      "imaging": "Imagerie",
+      "report": "Compte rendu",
+      "other": "Autre"
+    },
+    "upload": "Envoyer",
+    "open": "Ouvrir",
+    "empty": "Aucun document."
+  },
+  "access": {
+    "title": "Accès à mon dossier",
+    "subtitle": "Qui a consulté votre dossier, quand et pourquoi.",
+    "show_self": "Afficher aussi mes propres consultations",
+    "hide_self": "Masquer mes propres consultations",
+    "empty": "Aucune consultation pour le moment.",
+    "emergency_scanned": "Votre carte d'urgence a été consultée",
+    "by_you": "Vous",
+    "reason": "Motif",
+    "flagged": "Accès d'urgence signalé",
+    "actions": {
+      "record_view": "Dossier consulté",
+      "emergency_access_denied": "Tentative avec une carte révoquée ou expirée",
+      "emergency_card_created": "Carte d'urgence créée",
+      "emergency_card_revoked": "Carte d'urgence révoquée",
+      "consent_code_created": "Code de partage créé",
+      "consent_granted": "Accès accordé à un professionnel",
+      "consent_revoked": "Accès retiré",
+      "encounter_added": "Nouvelle visite ajoutée",
+      "ai_summary": "Résumé IA généré",
+      "ai_assistant": "Question à l'assistant IA"
+    },
+    "roles": {
+      "patient": "Patient",
+      "clinician": "Professionnel de santé",
+      "emergency_scan": "Scan de la carte d'urgence",
+      "admin": "Administrateur",
+      "system": "Système"
+    }
+  },
+  "emergency": {
+    "title": "Carte d'urgence",
+    "subtitle": "En cas d'urgence, un soignant scanne ce code avec n'importe quel téléphone.",
+    "card_title": "Carte d'urgence",
+    "card_a11y": "Carte d'urgence de {{name}}, groupe sanguin {{blood}}, avec code QR",
+    "scan_me": "Scannez en cas d'urgence",
+    "expires": "valable jusqu'au {{date}}",
+    "none": "Vous n'avez pas encore de carte d'urgence sur cet appareil.",
+    "active_elsewhere": "Une carte est active (créée sur un autre appareil). Créez-en une nouvelle ici pour l'afficher : l'ancienne sera révoquée.",
+    "generate": "Créer ma carte",
+    "regenerate": "Nouvelle carte",
+    "revoke": "Révoquer",
+    "print": "Imprimer / télécharger",
+    "preview": "Voir ce que voit le soignant",
+    "privacy_title": "Ce que contient le code",
+    "privacy_body": "Le code QR ne contient aucune donnée médicale : seulement un lien avec un code secret aléatoire. Vous pouvez le révoquer à tout moment. Chaque scan est enregistré.",
+    "shows": "Le soignant voit uniquement :",
+    "fields": {
+      "first_name": "Prénom",
+      "age": "Âge",
+      "blood_group": "Groupe sanguin",
+      "allergies": "Allergies graves",
+      "conditions": "Maladies importantes",
+      "medications": "Médicaments en cours",
+      "contact": "Personne à prévenir"
+    },
+    "scan_history": "Historique des scans",
+    "no_scans": "Aucun scan pour le moment."
+  },
+  "ev": {
+    "title": "Informations d'urgence",
+    "age_one": "{{count}} an",
+    "age_other": "{{count}} ans",
+    "pregnant": "Enceinte",
+    "blood_group": "Groupe sanguin",
+    "unknown": "Inconnu",
+    "allergies": "Allergies graves",
+    "conditions": "Maladies importantes",
+    "medications": "Médicaments en cours",
+    "contact": "Personne à prévenir",
+    "none": "Aucune connue",
+    "revoked": "Carte révoquée",
+    "expired": "Carte expirée",
+    "not_found": "Carte introuvable",
+    "logged": "Cette consultation est enregistrée et signalée au patient.",
+    "demo_note": "DÉMO — données fictives. Ne pas utiliser pour des soins réels."
+  },
+  "maternal": {
+    "title": "Mère & enfant",
+    "empty": "Aucun suivi de grossesse ni enfant enregistré.",
+    "pregnancy": "Ma grossesse",
+    "ga": "{{weeks}} semaines et {{days}} jours",
+    "trimester": "Trimestre {{n}}",
+    "risk": {
+      "standard": "Suivi standard",
+      "high": "Suivi rapproché (classé à haut risque par l'équipe)"
+    },
+    "edd": "Date prévue d'accouchement : {{date}}",
+    "next_visit": "Prochaine visite",
+    "next_visit_in_one": "Dans {{count}} jour, le {{date}}.",
+    "next_visit_in_other": "Dans {{count}} jours, le {{date}}.",
+    "visits": "Visites prénatales",
+    "visits_progress": "{{done}} visites faites sur {{total}} recommandées",
+    "visit_n": "Visite {{n}}",
+    "week_n": "semaine {{n}}",
+    "visit_status": {
+      "done": "faite",
+      "planned": "prévue"
+    },
+    "weight_chart": "Évolution du poids",
+    "weeks_axis": "Semaines de grossesse",
+    "measures": "Mesures",
+    "notes": "Notes du professionnel",
+    "planned_note": "Visite à venir. Les mesures seront ajoutées par le professionnel."
+  },
+  "children": {
+    "title": "Mes enfants",
+    "open": "Calendrier des vaccins",
+    "age_months_one": "{{count}} mois",
+    "age_months_other": "{{count}} mois",
+    "born": "Né(e) le {{date}}",
+    "calendar": "Calendrier des vaccins",
+    "schedule_source": "Calendrier indicatif de démonstration, issu de la table vaccination_schedule. {{note}}",
+    "status": {
+      "done": "Fait",
+      "overdue": "En retard",
+      "due": "À faire",
+      "upcoming": "À venir"
+    },
+    "given_on": "Fait le {{date}}",
+    "due_on": "Prévu le {{date}} (à {{weeks}} semaines)",
+    "next_vaccine": "Prochain vaccin",
+    "due_now": "{{names}} : c'est le moment.",
+    "due_in_days_one": "{{names}} dans {{count}} jour.",
+    "due_in_days_other": "{{names}} dans {{count}} jours.",
+    "due_in_weeks_one": "{{names}} dans {{count}} semaine.",
+    "due_in_weeks_other": "{{names}} dans {{count}} semaines.",
+    "overdue_title_one": "{{count}} vaccin en retard",
+    "overdue_title_other": "{{count}} vaccins en retard",
+    "overdue_body": "Parlez-en lors de votre prochaine visite au centre de santé.",
+    "all_done": "Tous les vaccins prévus à ce jour sont faits.",
+    "growth": "Courbe de poids",
+    "months_axis": "Âge (mois)",
+    "at_months_one": "à {{count}} mois",
+    "at_months_other": "à {{count}} mois",
+    "no_reference": "Courbes de référence à ajouter après validation"
+  },
+  "summary": {
+    "title": "Mon résumé",
+    "subtitle": "Votre dossier en mots simples.",
+    "language": "Langue du résumé",
+    "ai_badge": "Généré par IA",
+    "sources": "D'où viennent ces informations :",
+    "open_source": "Ouvrir",
+    "generated_at": "Généré le {{date}}",
+    "how_title": "Comment ce résumé est protégé",
+    "how": {
+      "only_record": "L'IA reformule uniquement ce qui est déjà dans votre dossier.",
+      "no_advice": "Elle ne donne jamais de diagnostic ni de conseil de traitement.",
+      "deid": "Votre nom, votre téléphone et votre date de naissance ne sont jamais envoyés à l'IA.",
+      "validator": "Un contrôle automatique bloque tout résumé qui mentionne quelque chose d'absent de votre dossier."
+    }
+  },
+  "assistant": {
+    "title": "Assistant DjiHealth",
+    "subtitle": "Je vous aide à retrouver les informations de votre dossier.",
+    "disclaimer_title": "Pas un médecin",
+    "disclaimer": "L'assistant ne donne ni diagnostic ni conseil médical. Il ne répond qu'avec les informations de votre dossier. En cas d'urgence, appelez les secours.",
+    "try": "Essayez :",
+    "suggest": {
+      "allergies": "Quelles sont mes allergies ?",
+      "next_visit": "Quand est ma prochaine visite prénatale ?",
+      "child_vaccines": "Quel est le prochain vaccin de mon enfant ?",
+      "medications": "Quels médicaments je prends ?",
+      "share": "Comment partager mon dossier avec un médecin ?",
+      "advice": "Est-ce que je peux arrêter mon traitement ?"
+    },
+    "placeholder": "Posez votre question…",
+    "send": "Envoyer",
+    "you": "Vous",
+    "thinking": "Je cherche dans votre dossier…",
+    "error": "L'assistant n'est pas disponible pour le moment.",
+    "out_of_scope": "Question médicale : à poser à un professionnel",
+    "blocked": "Réponse bloquée par le contrôle de sécurité",
+    "open_screen": "Ouvrir la page"
+  },
+  "share": {
+    "title": "Partager mon dossier",
+    "subtitle": "Donnez un accès temporaire à un professionnel de santé.",
+    "new_code": "Code de partage",
+    "explain": "Montrez ce code (ou le QR) au professionnel. Il est valable 24 heures et une seule fois. Vous pouvez retirer l'accès à tout moment.",
+    "code_label": "Code à donner",
+    "valid_until": "Valable jusqu'au {{date}}",
+    "generate": "Créer un code",
+    "another_code": "Créer un autre code",
+    "grants": "Accès accordés",
+    "no_grants": "Aucun accès accordé.",
+    "waiting": "En attente du professionnel",
+    "granted_at": "Accordé le {{date}}",
+    "created_at": "Créé le {{date}}",
+    "expires_at": "expire le {{date}}",
+    "revoke": "Retirer l'accès",
+    "status": {
+      "pending": "Code non utilisé",
+      "active": "Accès actif",
+      "expired": "Expiré",
+      "revoked": "Retiré"
+    }
+  },
+  "clinician": {
+    "title": "Espace professionnel",
+    "subtitle": "Accès aux dossiers avec le consentement du patient.",
+    "enter_code": "Code du patient",
+    "enter_code_hint": "Le patient crée un code dans « Partager mon dossier ».",
+    "code": "Code (8 caractères)",
+    "reason": "Motif de l'accès",
+    "reason_hint": "Obligatoire. Il est enregistré et visible par le patient.",
+    "reasons": {
+      "consultation": "Consultation",
+      "antenatal": "Consultation prénatale",
+      "followup": "Suivi de traitement",
+      "emergency": "Urgence"
+    },
+    "open_record": "Ouvrir le dossier",
+    "scan": "Scanner le QR",
+    "camera_permission": "La caméra sert uniquement à lire le code de partage.",
+    "allow_camera": "Autoriser la caméra",
+    "code_error": "Code refusé",
+    "my_patients": "Patients avec un accès actif",
+    "my_patients_hint": "La liste disparaît dès que l'accès expire ou est retiré.",
+    "no_patients": "Aucun patient pour le moment.",
+    "rls_note": "Sans consentement valide, la base de données refuse l'accès (sécurité au niveau des lignes), quel que soit l'écran.",
+    "reason_title": "Motif de l'accès",
+    "reason_required": "Indiquez pourquoi vous ouvrez ce dossier. Le motif est enregistré et visible par le patient.",
+    "view_record": "Voir le dossier",
+    "record": "Dossier patient",
+    "logged_reason": "Accès enregistré — motif : {{reason}}",
+    "no_access": "Accès refusé (consentement absent, expiré ou retiré)",
+    "add_encounter": "Ajouter une visite",
+    "save_encounter": "Enregistrer la visite",
+    "saved": "Visite enregistrée",
+    "saved_body": "Le patient la voit immédiatement, marquée « saisi par un professionnel »."
+  },
+  "ministry": {
+    "title": "Tableau de bord national",
+    "subtitle": "Indicateurs agrégés et anonymisés.",
+    "synthetic": "Données fictives — démonstration",
+    "synthetic_body": "Aucun chiffre réel. Les groupes de moins de 5 personnes sont masqués (« < 5 ») pour empêcher toute ré-identification.",
+    "filter_region": "Région",
+    "all_regions": "Toutes les régions",
+    "kpi": {
+      "enrolled": "Personnes inscrites",
+      "pregnancies": "Grossesses suivies",
+      "anc": "Suivi prénatal complet"
+    },
+    "anc_rule": "Complet = au moins {{n}} visites (valeur à valider)",
+    "anc_progress": "{{complete}} sur {{eligible}} grossesses terminées ({{pct}} %)",
+    "chart_label": "Données fictives — démonstration",
+    "charts": {
+      "enrolled": "Inscrits par région",
+      "coverage": "Couverture vaccinale par vaccin",
+      "trimester": "Grossesses en cours par trimestre",
+      "anc": "Grossesses avec suivi prénatal complet",
+      "conditions": "5 maladies chroniques les plus fréquentes"
+    },
+    "coverage_note": "Enfants de moins de 5 ans ayant atteint l'âge de la dose (+4 semaines). Calendrier indicatif à valider.",
+    "suppressed_a11y": "moins de 5, masqué",
+    "footer": "Groupes de moins de {{min}} masqués. Généré le {{date}}."
+  },
+  "admin": {
+    "title": "Contrôle de l'IA",
+    "subtitle": "Brouillons rejetés par le validateur.",
+    "explain": "Ces textes n'ont jamais été montrés aux patients. Ils servent à améliorer les consignes de l'IA.",
+    "empty": "Aucun rejet pour le moment.",
+    "draft": "Brouillon rejeté"
+  },
+  "charts": {
+    "tap_point": "Touchez un point pour lire la valeur.",
+    "show_table": "Afficher le tableau",
+    "hide_table": "Masquer le tableau"
+  }
+}

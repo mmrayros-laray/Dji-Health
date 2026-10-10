@@ -1,0 +1,447 @@
+{
+  "_meta": {
+    "language": "en",
+    "_review": "machine"
+  },
+  "demo": {
+    "banner": "DEMO — synthetic data",
+    "footer": "DjiHealth — demonstration prototype · LARAY Strategic Advisory"
+  },
+  "setup": {
+    "title": "Missing configuration",
+    "body": "Set EXPO_PUBLIC_SUPABASE_URL and EXPO_PUBLIC_SUPABASE_ANON_KEY in .env.local (see README)."
+  },
+  "language": {
+    "choose": "Language",
+    "machine_note": "Translation awaiting review."
+  },
+  "common": {
+    "back": "Back",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "save": "Save",
+    "refresh": "Refresh",
+    "error": "Something went wrong",
+    "no_data": "No data yet.",
+    "offline": "Offline — last saved data (read-only).",
+    "sign_out": "Sign out",
+    "unknown": "unknown"
+  },
+  "home": {
+    "tagline": "Your health record, with you everywhere in Djibouti.",
+    "privacy_title": "Secure demonstration",
+    "privacy_body": "All people and data in this demonstration are fictitious. Every time a record is opened, it is logged.",
+    "start": "Start the demo",
+    "features": {
+      "vault": "A medical vault: conditions, allergies, medicines, vaccines, visits and documents.",
+      "emergency": "An emergency card with a QR code that any phone can read.",
+      "maternal": "Pregnancy follow-up and children's vaccination calendar.",
+      "ai": "An AI summary and assistant that explain the record in simple words, never giving medical advice.",
+      "ministry": "An anonymised dashboard for the Ministry."
+    }
+  },
+  "signin": {
+    "title": "Demo accounts",
+    "subtitle": "Tap a profile to sign in.",
+    "error": "Could not sign in",
+    "note": "Fictitious accounts with a shared demo password. No real data.",
+    "accounts": {
+      "amina": {
+        "name": "Amina",
+        "desc": "Patient, 24 weeks pregnant (Balbala)"
+      },
+      "fatouma": {
+        "name": "Fatouma",
+        "desc": "Patient, mother of a toddler (Djibouti City)"
+      },
+      "hassan": {
+        "name": "Dr Hassan",
+        "desc": "Doctor — access with the patient's consent"
+      },
+      "ministry": {
+        "name": "Ministry",
+        "desc": "Aggregated, anonymised indicators"
+      },
+      "admin": {
+        "name": "Administrator",
+        "desc": "AI quality control (rejected drafts)"
+      }
+    }
+  },
+  "tabs": {
+    "vault": "Record",
+    "emergency": "Emergency",
+    "maternal": "Family",
+    "assistant": "Assistant",
+    "share": "Share"
+  },
+  "sex": {
+    "female": "female",
+    "male": "male",
+    "other": "other",
+    "unknown": "not stated"
+  },
+  "sections": {
+    "conditions": "Conditions",
+    "allergies": "Allergies",
+    "medications": "Medicines",
+    "immunizations": "Vaccines",
+    "encounters": "Visits",
+    "documents": "Documents",
+    "pregnancies": "Pregnancy",
+    "children": "Children"
+  },
+  "source": {
+    "patient": "Reported by the patient",
+    "professional": "Entered by a professional"
+  },
+  "status": {
+    "active": "Active",
+    "inactive": "Inactive",
+    "resolved": "Resolved",
+    "completed": "Completed",
+    "stopped": "Stopped"
+  },
+  "criticality": {
+    "low": "Mild allergy",
+    "high": "Severe allergy",
+    "unable-to-assess": "Severity unknown"
+  },
+  "obs": {
+    "weight": "Weight",
+    "height": "Height",
+    "blood_pressure": "Blood pressure",
+    "hemoglobin": "Haemoglobin",
+    "glucose": "Blood sugar",
+    "temperature": "Temperature",
+    "muac": "Arm circumference"
+  },
+  "fields": {
+    "condition": "Condition",
+    "onset_date": "Since",
+    "date_hint": "Format YYYY-MM-DD, e.g. 2026-03-15",
+    "status": "Status",
+    "substance": "Substance",
+    "reaction": "Reaction",
+    "criticality": "Severity",
+    "medication": "Medicine",
+    "dosage": "How to take it",
+    "vaccine": "Vaccine",
+    "date_given": "Date",
+    "dose_number": "Dose number",
+    "reason": "Reason",
+    "notes": "Notes"
+  },
+  "vault": {
+    "title": "My record",
+    "photo_placeholder": "Photo (placeholder)",
+    "age_one": "{{count}} year old",
+    "age_other": "{{count}} years old",
+    "blood_group": "Blood group",
+    "emergency_scanned": "Your emergency card was viewed",
+    "emergency_scanned_when": "Viewed on {{when}}. If this was not an emergency, you can revoke the card.",
+    "summary_teaser": "Your record explained in simple words, in your language.",
+    "open_summary": "See my summary",
+    "access_teaser_one": "{{count}} view of your record by someone else.",
+    "access_teaser_other": "{{count}} views of your record by other people.",
+    "open_access": "Who has seen my record?",
+    "synthetic_note": "Fictitious person — demonstration data.",
+    "add_item": "Add",
+    "edit_item": "Edit",
+    "empty": "Nothing recorded yet.",
+    "critical": "Important in an emergency",
+    "since": "Since {{date}}",
+    "reaction": "Reaction",
+    "dose": "dose {{n}}",
+    "patient_reported_note": "What you add will be marked \"reported by the patient\"."
+  },
+  "documents": {
+    "upload_title": "Add a document",
+    "upload_hint": "Photo or PDF (lab result, prescription…). 10 MB maximum.",
+    "choose_file": "Choose a file",
+    "doc_title": "Title",
+    "kind": "Type",
+    "kinds": {
+      "lab_result": "Lab result",
+      "prescription": "Prescription",
+      "imaging": "Imaging",
+      "report": "Report",
+      "other": "Other"
+    },
+    "upload": "Upload",
+    "open": "Open",
+    "empty": "No documents."
+  },
+  "access": {
+    "title": "Access to my record",
+    "subtitle": "Who viewed your record, when and why.",
+    "show_self": "Also show my own views",
+    "hide_self": "Hide my own views",
+    "empty": "No access yet.",
+    "emergency_scanned": "Your emergency card was viewed",
+    "by_you": "You",
+    "reason": "Reason",
+    "flagged": "Emergency access flagged",
+    "actions": {
+      "record_view": "Record viewed",
+      "emergency_access_denied": "Attempt with a revoked or expired card",
+      "emergency_card_created": "Emergency card created",
+      "emergency_card_revoked": "Emergency card revoked",
+      "consent_code_created": "Sharing code created",
+      "consent_granted": "Access granted to a professional",
+      "consent_revoked": "Access withdrawn",
+      "encounter_added": "New visit added",
+      "ai_summary": "AI summary generated",
+      "ai_assistant": "Question to the AI assistant"
+    },
+    "roles": {
+      "patient": "Patient",
+      "clinician": "Health professional",
+      "emergency_scan": "Emergency card scan",
+      "admin": "Administrator",
+      "system": "System"
+    }
+  },
+  "emergency": {
+    "title": "Emergency card",
+    "subtitle": "In an emergency, a health worker scans this code with any phone.",
+    "card_title": "Emergency card",
+    "card_a11y": "Emergency card of {{name}}, blood group {{blood}}, with QR code",
+    "scan_me": "Scan in an emergency",
+    "expires": "valid until {{date}}",
+    "none": "You don't have an emergency card on this device yet.",
+    "active_elsewhere": "A card is active (created on another device). Create a new one here to display it: the old one will be revoked.",
+    "generate": "Create my card",
+    "regenerate": "New card",
+    "revoke": "Revoke",
+    "print": "Print / download",
+    "preview": "See what the health worker sees",
+    "privacy_title": "What the code contains",
+    "privacy_body": "The QR code contains no medical data: only a link with a random secret code. You can revoke it at any time. Every scan is logged.",
+    "shows": "The health worker only sees:",
+    "fields": {
+      "first_name": "First name",
+      "age": "Age",
+      "blood_group": "Blood group",
+      "allergies": "Severe allergies",
+      "conditions": "Important conditions",
+      "medications": "Current medicines",
+      "contact": "Emergency contact"
+    },
+    "scan_history": "Scan history",
+    "no_scans": "No scans yet."
+  },
+  "ev": {
+    "title": "Emergency information",
+    "age_one": "{{count}} year old",
+    "age_other": "{{count}} years old",
+    "pregnant": "Pregnant",
+    "blood_group": "Blood group",
+    "unknown": "Unknown",
+    "allergies": "Severe allergies",
+    "conditions": "Important conditions",
+    "medications": "Current medicines",
+    "contact": "Emergency contact",
+    "none": "None known",
+    "revoked": "Card revoked",
+    "expired": "Card expired",
+    "not_found": "Card not found",
+    "logged": "This access is logged and reported to the patient.",
+    "demo_note": "DEMO — synthetic data. Do not use for real care."
+  },
+  "maternal": {
+    "title": "Mother & child",
+    "empty": "No pregnancy follow-up or children recorded.",
+    "pregnancy": "My pregnancy",
+    "ga": "{{weeks}} weeks and {{days}} days",
+    "trimester": "Trimester {{n}}",
+    "risk": {
+      "standard": "Standard follow-up",
+      "high": "Close follow-up (classified high risk by the team)"
+    },
+    "edd": "Expected due date: {{date}}",
+    "next_visit": "Next visit",
+    "next_visit_in_one": "In {{count}} day, on {{date}}.",
+    "next_visit_in_other": "In {{count}} days, on {{date}}.",
+    "visits": "Antenatal visits",
+    "visits_progress": "{{done}} visits done out of {{total}} recommended",
+    "visit_n": "Visit {{n}}",
+    "week_n": "week {{n}}",
+    "visit_status": {
+      "done": "done",
+      "planned": "planned"
+    },
+    "weight_chart": "Weight over time",
+    "weeks_axis": "Weeks of pregnancy",
+    "measures": "Measurements",
+    "notes": "Professional's notes",
+    "planned_note": "Upcoming visit. Measurements will be added by the professional."
+  },
+  "children": {
+    "title": "My children",
+    "open": "Vaccination calendar",
+    "age_months_one": "{{count}} month",
+    "age_months_other": "{{count}} months",
+    "born": "Born on {{date}}",
+    "calendar": "Vaccination calendar",
+    "schedule_source": "Indicative demonstration schedule, from the vaccination_schedule table. {{note}}",
+    "status": {
+      "done": "Done",
+      "overdue": "Overdue",
+      "due": "Due now",
+      "upcoming": "Upcoming"
+    },
+    "given_on": "Given on {{date}}",
+    "due_on": "Planned for {{date}} (at {{weeks}} weeks)",
+    "next_vaccine": "Next vaccine",
+    "due_now": "{{names}}: it is time.",
+    "due_in_days_one": "{{names}} in {{count}} day.",
+    "due_in_days_other": "{{names}} in {{count}} days.",
+    "due_in_weeks_one": "{{names}} in {{count}} week.",
+    "due_in_weeks_other": "{{names}} in {{count}} weeks.",
+    "overdue_title_one": "{{count}} vaccine overdue",
+    "overdue_title_other": "{{count}} vaccines overdue",
+    "overdue_body": "Mention it at your next visit to the health centre.",
+    "all_done": "All vaccines planned so far are done.",
+    "growth": "Weight curve",
+    "months_axis": "Age (months)",
+    "at_months_one": "at {{count}} month",
+    "at_months_other": "at {{count}} months",
+    "no_reference": "Reference curves to be added after validation"
+  },
+  "summary": {
+    "title": "My summary",
+    "subtitle": "Your record in simple words.",
+    "language": "Summary language",
+    "ai_badge": "AI-generated",
+    "sources": "Where this information comes from:",
+    "open_source": "Open",
+    "generated_at": "Generated on {{date}}",
+    "how_title": "How this summary is protected",
+    "how": {
+      "only_record": "The AI only rephrases what is already in your record.",
+      "no_advice": "It never gives a diagnosis or treatment advice.",
+      "deid": "Your name, phone and date of birth are never sent to the AI.",
+      "validator": "An automatic check blocks any summary that mentions something not in your record."
+    }
+  },
+  "assistant": {
+    "title": "DjiHealth Assistant",
+    "subtitle": "I help you find information in your record.",
+    "disclaimer_title": "Not a doctor",
+    "disclaimer": "The assistant gives no diagnosis or medical advice. It only answers with information from your record. In an emergency, call emergency services.",
+    "try": "Try:",
+    "suggest": {
+      "allergies": "What are my allergies?",
+      "next_visit": "When is my next antenatal visit?",
+      "child_vaccines": "What is my child's next vaccine?",
+      "medications": "Which medicines do I take?",
+      "share": "How do I share my record with a doctor?",
+      "advice": "Can I stop my treatment?"
+    },
+    "placeholder": "Ask your question…",
+    "send": "Send",
+    "you": "You",
+    "thinking": "Looking in your record…",
+    "error": "The assistant is not available right now.",
+    "out_of_scope": "Medical question: ask a health professional",
+    "blocked": "Answer blocked by the safety check",
+    "open_screen": "Open the page"
+  },
+  "share": {
+    "title": "Share my record",
+    "subtitle": "Give a health professional temporary access.",
+    "new_code": "Sharing code",
+    "explain": "Show this code (or the QR) to the professional. It is valid for 24 hours and can be used once. You can withdraw access at any time.",
+    "code_label": "Code to give",
+    "valid_until": "Valid until {{date}}",
+    "generate": "Create a code",
+    "another_code": "Create another code",
+    "grants": "Access granted",
+    "no_grants": "No access granted.",
+    "waiting": "Waiting for the professional",
+    "granted_at": "Granted on {{date}}",
+    "created_at": "Created on {{date}}",
+    "expires_at": "expires on {{date}}",
+    "revoke": "Withdraw access",
+    "status": {
+      "pending": "Code not used",
+      "active": "Access active",
+      "expired": "Expired",
+      "revoked": "Withdrawn"
+    }
+  },
+  "clinician": {
+    "title": "Professional area",
+    "subtitle": "Access to records with the patient's consent.",
+    "enter_code": "Patient's code",
+    "enter_code_hint": "The patient creates a code in \"Share my record\".",
+    "code": "Code (8 characters)",
+    "reason": "Reason for access",
+    "reason_hint": "Required. It is logged and visible to the patient.",
+    "reasons": {
+      "consultation": "Consultation",
+      "antenatal": "Antenatal consultation",
+      "followup": "Treatment follow-up",
+      "emergency": "Emergency"
+    },
+    "open_record": "Open the record",
+    "scan": "Scan the QR",
+    "camera_permission": "The camera is only used to read the sharing code.",
+    "allow_camera": "Allow camera",
+    "code_error": "Code refused",
+    "my_patients": "Patients with active access",
+    "my_patients_hint": "The list empties as soon as access expires or is withdrawn.",
+    "no_patients": "No patients yet.",
+    "rls_note": "Without valid consent, the database refuses access (row-level security), whatever the screen.",
+    "reason_title": "Reason for access",
+    "reason_required": "State why you are opening this record. The reason is logged and visible to the patient.",
+    "view_record": "View record",
+    "record": "Patient record",
+    "logged_reason": "Access logged — reason: {{reason}}",
+    "no_access": "Access refused (consent missing, expired or withdrawn)",
+    "add_encounter": "Add a visit",
+    "save_encounter": "Save the visit",
+    "saved": "Visit saved",
+    "saved_body": "The patient sees it immediately, marked \"entered by a professional\"."
+  },
+  "ministry": {
+    "title": "National dashboard",
+    "subtitle": "Aggregated, anonymised indicators.",
+    "synthetic": "Synthetic data — demonstration",
+    "synthetic_body": "No real figures. Groups of fewer than 5 people are hidden (\"< 5\") to prevent re-identification.",
+    "filter_region": "Region",
+    "all_regions": "All regions",
+    "kpi": {
+      "enrolled": "People enrolled",
+      "pregnancies": "Pregnancies followed",
+      "anc": "Complete antenatal follow-up"
+    },
+    "anc_rule": "Complete = at least {{n}} visits (value to be validated)",
+    "anc_progress": "{{complete}} of {{eligible}} completed pregnancies ({{pct}} %)",
+    "chart_label": "Synthetic data — demonstration",
+    "charts": {
+      "enrolled": "Enrolled by region",
+      "coverage": "Vaccination coverage by vaccine",
+      "trimester": "Current pregnancies by trimester",
+      "anc": "Pregnancies with complete antenatal follow-up",
+      "conditions": "Top 5 chronic conditions"
+    },
+    "coverage_note": "Children under 5 who have reached the age for the dose (+4 weeks). Indicative schedule to be validated.",
+    "suppressed_a11y": "fewer than 5, hidden",
+    "footer": "Groups smaller than {{min}} hidden. Generated on {{date}}."
+  },
+  "admin": {
+    "title": "AI quality control",
+    "subtitle": "Drafts rejected by the validator.",
+    "explain": "These texts were never shown to patients. They are used to improve the AI instructions.",
+    "empty": "No rejections yet.",
+    "draft": "Rejected draft"
+  },
+  "charts": {
+    "tap_point": "Tap a point to read its value.",
+    "show_table": "Show table",
+    "hide_table": "Hide table"
+  }
+}
