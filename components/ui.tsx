@@ -1,14 +1,20 @@
 // Small design-system primitives. Accessibility (CLAUDE.md §8): 48 px targets, ≥16 px body text,
 // icons always paired with text, AA contrast, screen-reader labels.
-import { MaterialCommunityIcons } from "@expo/vector-icons";
+import type MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
+import createIconSet from "@expo/vector-icons/createIconSet";
 import type { ComponentProps, ReactNode } from "react";
 import { ActivityIndicator, Pressable, StyleSheet, Text, View, type StyleProp, type TextStyle, type ViewStyle } from "react-native";
 import { colors, fonts, radius, space, TOUCH, type } from "../lib/theme";
+import glyphMap from "../assets/icons/glyphmap.json";
 
 export type IconName = ComponentProps<typeof MaterialCommunityIcons>["name"];
 
+// Subset of MaterialCommunityIcons with only the glyphs the app uses (16 KB instead of 1.3 MB).
+// Regenerate with `node scripts/build-icons.mjs` after using a new icon name.
+const DjhIcons = createIconSet(glyphMap as Record<IconName, number>, "djh-icons", require("../assets/icons/djh-icons.ttf"));
+
 export function Icon({ name, size = 24, color = colors.navy }: { name: IconName; size?: number; color?: string }) {
-  return <MaterialCommunityIcons name={name} size={size} color={color} accessibilityElementsHidden importantForAccessibility="no" />;
+  return <DjhIcons name={name} size={size} color={color} accessibilityElementsHidden importantForAccessibility="no" />;
 }
 
 export function H1({ children, style }: { children: ReactNode; style?: StyleProp<TextStyle> }) {
