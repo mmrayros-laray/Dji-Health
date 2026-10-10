@@ -1,6 +1,21 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
-  }
+    "strict": true,
+    "noUncheckedIndexedAccess": false,
+    "allowImportingTsExtensions": true,
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.tsx", ".expo/types/**/*.ts", "expo-env.d.ts"],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "supabase/functions/summarize-record",
+    "supabase/functions/emergency-view",
+    "supabase/functions/record-assistant",
+    "supabase/functions/_shared/anthropic.ts",
+    "supabase/functions/_shared/http.ts"
+  ]
 }

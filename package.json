@@ -12,7 +12,8 @@
     "test": "node --experimental-strip-types --no-warnings --test tests/*.test.ts",
     "test:db": "bash scripts/test-db.sh",
     "sync:glossary": "node scripts/sync-glossary.mjs",
-    "export:web": "expo export --platform web"
+    "export:web": "expo export --platform web",
+    "check:functions": "deno check --config supabase/functions/deno.check.json supabase/functions/*/index.ts"
   },
   "dependencies": {
     "@expo/metro-runtime": "~6.1.2",

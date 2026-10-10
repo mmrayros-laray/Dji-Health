@@ -1,0 +1,998 @@
+{
+ "_meta": {
+  "description": "DjiHealth medical glossary (CLAUDE.md §6). One entry per concept, with the display form in each demo language. Used by the UI to translate record items and by the AI validator to detect medical entities in any language.",
+  "_review": "machine",
+  "note": "Somali and Arabic forms are machine-drafted and MUST be validated by native-speaking health professionals (OPEN_QUESTIONS.md). Entries marked guard=true are not in any seeded record; they let the validator catch invented conditions/medications.",
+  "languages_planned": [
+   "aa",
+   "am",
+   "om",
+   "ti"
+  ]
+ },
+ "terms": [
+  {
+   "id": "anemia",
+   "category": "condition",
+   "codes": [
+    "D64.9",
+    "O99.0"
+   ],
+   "fr": "Anémie",
+   "so": "Dhiig-yaraan",
+   "ar": "فقر الدم",
+   "en": "Anaemia",
+   "aliases": {
+    "fr": [
+     "anemique"
+    ],
+    "so": [
+     "dhiig yari"
+    ],
+    "ar": [
+     "أنيميا"
+    ],
+    "en": [
+     "anemia",
+     "anaemic",
+     "anemic"
+    ]
+   },
+   "_review": "machine"
+  },
+  {
+   "id": "diabetes_t2",
+   "category": "condition",
+   "codes": [
+    "E11"
+   ],
+   "fr": "Diabète de type 2",
+   "so": "Sonkorowga nooca 2",
+   "ar": "داء السكري من النوع الثاني",
+   "en": "Type 2 diabetes",
+   "aliases": {
+    "fr": [
+     "diabète",
+     "diabetique"
+    ],
+    "so": [
+     "sonkorow",
+     "macaanka"
+    ],
+    "ar": [
+     "السكري",
+     "سكري"
+    ],
+    "en": [
+     "diabetes",
+     "diabetic"
+    ]
+   },
+   "_review": "machine"
+  },
+  {
+   "id": "hypertension",
+   "category": "condition",
+   "codes": [
+    "I10"
+   ],
+   "fr": "Hypertension artérielle",
+   "so": "Dhiig-kar",
+   "ar": "ارتفاع ضغط الدم",
+   "en": "High blood pressure",
+   "aliases": {
+    "fr": [
+     "hypertension",
+     "tension artérielle élevée"
+    ],
+    "so": [
+     "dhiig kar"
+    ],
+    "ar": [
+     "ضغط الدم المرتفع"
+    ],
+    "en": [
+     "hypertension"
+    ]
+   },
+   "_review": "machine"
+  },
+  {
+   "id": "asthma",
+   "category": "condition",
+   "codes": [
+    "J45"
+   ],
+   "fr": "Asthme",
+   "so": "Xanuunka neefta (asma)",
+   "ar": "الربو",
+   "en": "Asthma",
+   "aliases": {
+    "fr": [
+     "asthmatique"
+    ],
+    "so": [
+     "asma",
+     "neefta"
+    ],
+    "ar": [
+     "ربو"
+    ],
+    "en": [
+     "asthmatic"
+    ]
+   },
+   "_review": "machine"
+  },
+  {
+   "id": "epilepsy",
+   "category": "condition",
+   "codes": [
+    "G40"
+   ],
+   "fr": "Épilepsie",
+   "so": "Suuxdin (qallal)",
+   "ar": "الصرع",
+   "en": "Epilepsy",
+   "aliases": {
+    "fr": [
+     "epileptique"
+    ],
+    "so": [
+     "suuxdin",
+     "qallal"
+    ],
+    "ar": [
+     "صرع"
+    ],
+    "en": [
+     "epileptic",
+     "seizure disorder"
+    ]
+   },
+   "_review": "machine"
+  },
+  {
+   "id": "sickle_cell",
+   "category": "condition",
+   "codes": [
+    "D57"
+   ],
+   "fr": "Drépanocytose",
+   "so": "Cudurka dhiigga ee qaab-gacan (sickle cell)",
+   "ar": "فقر الدم المنجلي",
+   "en": "Sickle cell disease",
+   "aliases": {
+    "fr": [
+     "drepanocytaire"
+    ],
+    "so": [
+     "sickle cell"
+    ],
+    "ar": [
+     "الأنيميا المنجلية"
+    ],
+    "en": [
+     "sickle cell",
+     "sickle-cell"
+    ]
+   },
+   "_review": "machine"
+  },
+  {
+   "id": "tuberculosis",
+   "category": "condition",
+   "codes": [
+    "A15",
+    "A16"
+   ],
+   "fr": "Tuberculose",
+   "so": "Qaaxo",
+   "ar": "السل",
+   "en": "Tuberculosis",
+   "aliases": {
+    "fr": [],
+    "so": [],
+    "ar": [
+     "مرض السل"
+    ],
+    "en": [
+     "tb"
+    ]
+   },
+   "_review": "machine"
+  },
+  {
+   "id": "pre_eclampsia",
+   "category": "condition",
+   "codes": [
+    "O14"
+   ],
+   "guard": true,
+   "fr": "Pré-éclampsie",
+   "so": "Dhiig-karka uurka",
+   "ar": "تسمم الحمل",
+   "en": "Pre-eclampsia",
+   "aliases": {
+    "fr": [
+     "preeclampsie",
+     "éclampsie"
+    ],
+    "so": [],
+    "ar": [
+     "مقدمات الارتعاج"
+    ],
+    "en": [
+     "preeclampsia",
+     "eclampsia"
+    ]
+   },
+   "_review": "machine"
+  },
+  {
+   "id": "gestational_diabetes",
+   "category": "condition",
+   "codes": [
+    "O24.4"
+   ],
+   "guard": true,
+   "fr": "Diabète gestationnel",
+   "so": "Sonkorowga uurka",
+   "ar": "سكري الحمل",
+   "en": "Gestational diabetes",
+   "aliases": {
+    "fr": [],
+    "so": [],
+    "ar": [],
+    "en": []
+   },
+   "_review": "machine"
+  },
+  {
+   "id": "malaria",
+   "category": "condition",
+   "codes": [
+    "B54"
+   ],
+   "guard": true,
+   "fr": "Paludisme",
+   "so": "Duumo",
+   "ar": "الملاريا",
+   "en": "Malaria",
+   "aliases": {
+    "fr": [
+     "malaria"
+    ],
+    "so": [
+     "kaneeco"
+    ],
+    "ar": [
+     "ملاريا"
+    ],
+    "en": []
+   },
+   "_review": "machine"
+  },
+  {
+   "id": "hiv",
+   "category": "condition",
+   "codes": [
+    "B24"
+   ],
+   "guard": true,
+   "fr": "VIH",
+   "so": "HIV",
+   "ar": "فيروس نقص المناعة البشرية",
+   "en": "HIV",
+   "aliases": {
+    "fr": [
+     "sida"
+    ],
+    "so": [
+     "aydhis",
+     "aids"
+    ],
+    "ar": [
+     "الإيدز"
+    ],
+    "en": [
+     "aids"
+    ]
+   },
+   "_review": "machine"
+  },
+  {
+   "id": "hepatitis",
+   "category": "condition",
+   "codes": [
+    "B19"
+   ],
+   "guard": true,
+   "fr": "Hépatite",
+   "so": "Cagaarshow",
+   "ar": "التهاب الكبد",
+   "en": "Hepatitis",
+   "aliases": {
+    "fr": [],
+    "so": [],
+    "ar": [],
+    "en": []
+   },
+   "_review": "machine"
+  },
+  {
+   "id": "cancer",
+   "category": "condition",
+   "codes": [
+    "C80"
+   ],
+   "guard": true,
+   "fr": "Cancer",
+   "so": "Kansar",
+   "ar": "السرطان",
+   "en": "Cancer",
+   "aliases": {
+    "fr": [
+     "tumeur"
+    ],
+    "so": [],
+    "ar": [
+     "سرطان",
+     "ورم"
+    ],
+    "en": [
+     "tumour",
+     "tumor"
+    ]
+   },
+   "_review": "machine"
+  },
+  {
+   "id": "kidney_disease",
+   "category": "condition",
+   "codes": [
+    "N18"
+   ],
+   "guard": true,
+   "fr": "Maladie rénale",
+   "so": "Cudurka kelyaha",
+   "ar": "مرض الكلى",
+   "en": "Kidney disease",
+   "aliases": {
+    "fr": [
+     "insuffisance rénale"
+    ],
+    "so": [],
+    "ar": [
+     "الفشل الكلوي"
+    ],
+    "en": [
+     "renal failure"
+    ]
+   },
+   "_review": "machine"
+  },
+  {
+   "id": "cholera",
+   "category": "condition",
+   "codes": [
+    "A00"
+   ],
+   "guard": true,
+   "fr": "Choléra",
+   "so": "Daacuun",
+   "ar": "الكوليرا",
+   "en": "Cholera",
+   "aliases": {
+    "fr": [],
+    "so": [],
+    "ar": [],
+    "en": []
+   },
+   "_review": "machine"
+  },
+  {
+   "id": "covid",
+   "category": "condition",
+   "codes": [
+    "U07.1"
+   ],
+   "guard": true,
+   "fr": "COVID-19",
+   "so": "COVID-19",
+   "ar": "كوفيد-19",
+   "en": "COVID-19",
+   "aliases": {
+    "fr": [
+     "covid",
+     "coronavirus"
+    ],
+    "so": [
+     "covid",
+     "karoona"
+    ],
+    "ar": [
+     "كورونا"
+    ],
+    "en": [
+     "covid",
+     "coronavirus"
+    ]
+   },
+   "_review": "machine"
+  },
+  {
+   "id": "penicillin",
+   "category": "allergy",
+   "fr": "Pénicilline",
+   "so": "Bensiliin",
+   "ar": "البنسلين",
+   "en": "Penicillin",
+   "aliases": {
+    "fr": [
+     "penicillines"
+    ],
+    "so": [
+     "penisiliin",
+     "penicillin"
+    ],
+    "ar": [
+     "بنسلين"
+    ],
+    "en": []
+   },
+   "_review": "machine"
+  },
+  {
+   "id": "sulfonamides",
+   "category": "allergy",
+   "fr": "Sulfamides",
+   "so": "Daawooyinka sulfa",
+   "ar": "السلفوناميدات",
+   "en": "Sulfonamides",
+   "aliases": {
+    "fr": [
+     "sulfamide"
+    ],
+    "so": [
+     "sulfa"
+    ],
+    "ar": [
+     "سلفا"
+    ],
+    "en": [
+     "sulfa drugs",
+     "sulpha"
+    ]
+   },
+   "_review": "machine"
+  },
+  {
+   "id": "aspirin",
+   "category": "allergy",
+   "fr": "Aspirine",
+   "so": "Asbiriin",
+   "ar": "الأسبرين",
+   "en": "Aspirin",
+   "aliases": {
+    "fr": [],
+    "so": [
+     "aspirin"
+    ],
+    "ar": [
+     "أسبرين"
+    ],
+    "en": []
+   },
+   "_review": "machine"
+  },
+  {
+   "id": "peanut",
+   "category": "allergy",
+   "fr": "Arachide",
+   "so": "Lawska",
+   "ar": "الفول السوداني",
+   "en": "Peanut",
+   "aliases": {
+    "fr": [
+     "cacahuète",
+     "cacahuete"
+    ],
+    "so": [
+     "looska"
+    ],
+    "ar": [],
+    "en": [
+     "peanuts",
+     "groundnut"
+    ]
+   },
+   "_review": "machine"
+  },
+  {
+   "id": "latex",
+   "category": "allergy",
+   "fr": "Latex",
+   "so": "Laatigis",
+   "ar": "اللاتكس",
+   "en": "Latex",
+   "aliases": {
+    "fr": [],
+    "so": [
+     "latex"
+    ],
+    "ar": [
+     "لاتكس"
+    ],
+    "en": []
+   },
+   "_review": "machine"
+  },
+  {
+   "id": "iron_folic",
+   "category": "medication",
+   "fr": "Fer + acide folique",
+   "so": "Birta iyo folik asiid",
+   "ar": "الحديد وحمض الفوليك",
+   "en": "Iron + folic acid",
+   "aliases": {
+    "fr": [
+     "fer et acide folique",
+     "fer"
+    ],
+    "so": [
+     "bir"
+    ],
+    "ar": [
+     "الحديد",
+     "حديد"
+    ],
+    "en": [
+     "iron and folic acid",
+     "iron"
+    ]
+   },
+   "_review": "machine"
+  },
+  {
+   "id": "folic_acid",
+   "category": "medication",
+   "fr": "Acide folique",
+   "so": "Folik asiid",
+   "ar": "حمض الفوليك",
+   "en": "Folic acid",
+   "aliases": {
+    "fr": [],
+    "so": [
+     "folic"
+    ],
+    "ar": [],
+    "en": []
+   },
+   "_review": "machine"
+  },
+  {
+   "id": "metformin",
+   "category": "medication",
+   "fr": "Metformine",
+   "so": "Metformin",
+   "ar": "ميتفورمين",
+   "en": "Metformin",
+   "aliases": {
+    "fr": [],
+    "so": [
+     "metformiin"
+    ],
+    "ar": [
+     "الميتفورمين"
+    ],
+    "en": []
+   },
+   "_review": "machine"
+  },
+  {
+   "id": "amlodipine",
+   "category": "medication",
+   "fr": "Amlodipine",
+   "so": "Amlodibiin",
+   "ar": "أملوديبين",
+   "en": "Amlodipine",
+   "aliases": {
+    "fr": [],
+    "so": [
+     "amlodipine"
+    ],
+    "ar": [
+     "الأملوديبين"
+    ],
+    "en": []
+   },
+   "_review": "machine"
+  },
+  {
+   "id": "enalapril",
+   "category": "medication",
+   "fr": "Énalapril",
+   "so": "Enalabriil",
+   "ar": "إنالابريل",
+   "en": "Enalapril",
+   "aliases": {
+    "fr": [],
+    "so": [
+     "enalapril"
+    ],
+    "ar": [],
+    "en": []
+   },
+   "_review": "machine"
+  },
+  {
+   "id": "salbutamol",
+   "category": "medication",
+   "fr": "Salbutamol inhalateur",
+   "so": "Salbutamol (buufin)",
+   "ar": "بخاخ السالبوتامول",
+   "en": "Salbutamol inhaler",
+   "aliases": {
+    "fr": [
+     "salbutamol",
+     "ventoline"
+    ],
+    "so": [
+     "salbutamol"
+    ],
+    "ar": [
+     "سالبوتامول",
+     "السالبوتامول"
+    ],
+    "en": [
+     "salbutamol",
+     "albuterol"
+    ]
+   },
+   "_review": "machine"
+  },
+  {
+   "id": "carbamazepine",
+   "category": "medication",
+   "fr": "Carbamazépine",
+   "so": "Karbamaseebiin",
+   "ar": "كاربامازيبين",
+   "en": "Carbamazepine",
+   "aliases": {
+    "fr": [],
+    "so": [
+     "carbamazepine"
+    ],
+    "ar": [],
+    "en": []
+   },
+   "_review": "machine"
+  },
+  {
+   "id": "paracetamol",
+   "category": "medication",
+   "fr": "Paracétamol",
+   "so": "Barasetamool",
+   "ar": "باراسيتامول",
+   "en": "Paracetamol",
+   "aliases": {
+    "fr": [],
+    "so": [
+     "paracetamol"
+    ],
+    "ar": [
+     "الباراسيتامول"
+    ],
+    "en": [
+     "acetaminophen"
+    ]
+   },
+   "_review": "machine"
+  },
+  {
+   "id": "insulin",
+   "category": "medication",
+   "guard": true,
+   "fr": "Insuline",
+   "so": "Insuliin",
+   "ar": "الأنسولين",
+   "en": "Insulin",
+   "aliases": {
+    "fr": [],
+    "so": [
+     "insulin"
+    ],
+    "ar": [
+     "أنسولين"
+    ],
+    "en": []
+   },
+   "_review": "machine"
+  },
+  {
+   "id": "ibuprofen",
+   "category": "medication",
+   "guard": true,
+   "fr": "Ibuprofène",
+   "so": "Ibuprofen",
+   "ar": "إيبوبروفين",
+   "en": "Ibuprofen",
+   "aliases": {
+    "fr": [],
+    "so": [],
+    "ar": [],
+    "en": []
+   },
+   "_review": "machine"
+  },
+  {
+   "id": "antibiotic",
+   "category": "medication",
+   "guard": true,
+   "fr": "Antibiotique",
+   "so": "Antibiyootig",
+   "ar": "مضاد حيوي",
+   "en": "Antibiotic",
+   "aliases": {
+    "fr": [],
+    "so": [],
+    "ar": [
+     "المضادات الحيوية"
+    ],
+    "en": []
+   },
+   "_review": "machine"
+  },
+  {
+   "id": "amoxicillin",
+   "category": "medication",
+   "guard": true,
+   "fr": "Amoxicilline",
+   "so": "Amoksisiliin",
+   "ar": "أموكسيسيلين",
+   "en": "Amoxicillin",
+   "aliases": {
+    "fr": [],
+    "so": [],
+    "ar": [],
+    "en": []
+   },
+   "_review": "machine"
+  },
+  {
+   "id": "vacc_bcg",
+   "category": "vaccine",
+   "codes": [
+    "BCG"
+   ],
+   "fr": "BCG",
+   "so": "BCG",
+   "ar": "لقاح السل (BCG)",
+   "en": "BCG",
+   "aliases": {
+    "ar": [
+     "لقاح السل",
+     "لقاح BCG"
+    ],
+    "so": [
+     "tallaalka qaaxada"
+    ]
+   },
+   "_review": "machine"
+  },
+  {
+   "id": "vacc_hepb",
+   "category": "vaccine",
+   "codes": [
+    "HEPB"
+   ],
+   "fr": "Hépatite B",
+   "so": "Tallaalka cagaarshowga B",
+   "ar": "التهاب الكبد ب",
+   "en": "Hepatitis B",
+   "aliases": {
+    "fr": [
+     "hépatite b (naissance)"
+    ],
+    "so": [
+     "hepatitis b"
+    ],
+    "ar": [
+     "لقاح التهاب الكبد ب"
+    ],
+    "en": []
+   },
+   "_review": "machine"
+  },
+  {
+   "id": "vacc_polio",
+   "category": "vaccine",
+   "codes": [
+    "VPO",
+    "VPI"
+   ],
+   "fr": "Polio",
+   "so": "Dabaysha (polio)",
+   "ar": "شلل الأطفال",
+   "en": "Polio",
+   "aliases": {
+    "fr": [
+     "poliomyélite"
+    ],
+    "so": [
+     "polio"
+    ],
+    "ar": [],
+    "en": [
+     "poliomyelitis"
+    ]
+   },
+   "_review": "machine"
+  },
+  {
+   "id": "vacc_penta",
+   "category": "vaccine",
+   "codes": [
+    "PENTA"
+   ],
+   "fr": "Pentavalent",
+   "so": "Shan-ku-wadaag (Pentavalent)",
+   "ar": "اللقاح الخماسي",
+   "en": "Pentavalent",
+   "aliases": {
+    "fr": [],
+    "so": [
+     "pentavalent"
+    ],
+    "ar": [
+     "الخماسي"
+    ],
+    "en": []
+   },
+   "_review": "machine"
+  },
+  {
+   "id": "vacc_pcv",
+   "category": "vaccine",
+   "codes": [
+    "PCV"
+   ],
+   "fr": "Pneumocoque",
+   "so": "Tallaalka oof-wareenka (PCV)",
+   "ar": "لقاح المكورات الرئوية",
+   "en": "Pneumococcal",
+   "aliases": {
+    "fr": [
+     "pneumocoque (pcv)"
+    ],
+    "so": [
+     "pcv"
+    ],
+    "ar": [],
+    "en": [
+     "pneumococcus"
+    ]
+   },
+   "_review": "machine"
+  },
+  {
+   "id": "vacc_rota",
+   "category": "vaccine",
+   "codes": [
+    "ROTA"
+   ],
+   "fr": "Rotavirus",
+   "so": "Rotafayras",
+   "ar": "فيروس الروتا",
+   "en": "Rotavirus",
+   "aliases": {
+    "fr": [],
+    "so": [
+     "rotavirus"
+    ],
+    "ar": [
+     "الروتا"
+    ],
+    "en": []
+   },
+   "_review": "machine"
+  },
+  {
+   "id": "vacc_rr",
+   "category": "vaccine",
+   "codes": [
+    "RR"
+   ],
+   "fr": "Rougeole-Rubéole",
+   "so": "Jadeecada iyo jadeeco-jarmalka",
+   "ar": "الحصبة والحصبة الألمانية",
+   "en": "Measles-Rubella",
+   "aliases": {
+    "fr": [
+     "rougeole"
+    ],
+    "so": [
+     "jadeeco"
+    ],
+    "ar": [
+     "الحصبة"
+    ],
+    "en": [
+     "measles"
+    ]
+   },
+   "_review": "machine"
+  },
+  {
+   "id": "vacc_td",
+   "category": "vaccine",
+   "codes": [
+    "TD"
+   ],
+   "fr": "Tétanos-diphtérie",
+   "so": "Teetanada iyo gawracatada",
+   "ar": "الكزاز والخناق",
+   "en": "Tetanus-diphtheria",
+   "aliases": {
+    "fr": [
+     "tétanos",
+     "tetanos diphterie (td)"
+    ],
+    "so": [
+     "teetano",
+     "tetanus"
+    ],
+    "ar": [
+     "الكزاز"
+    ],
+    "en": [
+     "tetanus"
+    ]
+   },
+   "_review": "machine"
+  },
+  {
+   "id": "vacc_yellow_fever",
+   "category": "vaccine",
+   "codes": [
+    "YF"
+   ],
+   "guard": true,
+   "fr": "Fièvre jaune",
+   "so": "Qandho jaalle",
+   "ar": "الحمى الصفراء",
+   "en": "Yellow fever",
+   "aliases": {
+    "fr": [],
+    "so": [],
+    "ar": [],
+    "en": []
+   },
+   "_review": "machine"
+  },
+  {
+   "id": "vacc_hpv",
+   "category": "vaccine",
+   "codes": [
+    "HPV"
+   ],
+   "guard": true,
+   "fr": "Papillomavirus (HPV)",
+   "so": "HPV",
+   "ar": "فيروس الورم الحليمي",
+   "en": "HPV",
+   "aliases": {
+    "fr": [
+     "papillomavirus"
+    ],
+    "so": [],
+    "ar": [],
+    "en": [
+     "papillomavirus"
+    ]
+   },
+   "_review": "machine"
+  }
+ ]
+}
