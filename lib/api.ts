@@ -65,6 +65,7 @@ export interface AccessEntry {
 export function useAccessHistory(patientId?: string) {
   return useQuery({
     queryKey: ["access", patientId ?? "me"],
+    staleTime: 0, // a new emergency scan or doctor access must show as soon as the patient opens the app
     queryFn: () => rpc<AccessEntry[]>("get_access_history", { p_patient_id: patientId ?? null, p_limit: 200 }),
   });
 }
