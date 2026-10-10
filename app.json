@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "djihealth-demo",
+    "name": "DjiHealth",
     "slug": "djihealth-demo",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -10,21 +10,45 @@
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#0B1F3A"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.laray.djihealth.demo"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#0B1F3A"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.laray.djihealth.demo"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro",
+      "output": "single",
+      "name": "DjiHealth (démo)",
+      "themeColor": "#0B1F3A"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-localization",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "DjiHealth utilise la caméra pour scanner un code de partage de dossier (démo)."
+        }
+      ],
+      "expo-document-picker"
+    ],
+    "scheme": "djihealth",
+    "experiments": {
+      "typedRoutes": false
+    },
+    "extra": {
+      "supportsRTL": true
     }
   }
 }
