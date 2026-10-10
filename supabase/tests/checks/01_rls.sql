@@ -262,7 +262,7 @@ begin
   assert v->>'status' = 'ok', 'token resolves';
   assert (select array_agg(k order by k) from jsonb_object_keys(v->'data') k)
        = array['age_years','blood_group','critical_allergies','critical_conditions','current_medications',
-               'emergency_contact','first_name','pregnant'], 'emergency view returns only the minimal data set';
+               'emergency_contact','first_name'], 'emergency view returns only the minimal data set';
   assert v->'data'->>'first_name' = 'Amina' and not (v->'data' ? 'family_name'), 'first name only';
   assert exists (select 1 from public.audit_log where action = 'emergency_access' and flagged
                  and patient_id = '10000000-0000-4000-a000-000000000001'), 'scan is logged and flagged';

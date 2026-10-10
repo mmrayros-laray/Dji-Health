@@ -50,7 +50,6 @@ export default function EmergencyView() {
               <View style={st.identity}>
                 <Text style={st.name}>{d.first_name}</Text>
                 <Text style={st.big}>{t("ev.age", { count: d.age_years })}</Text>
-                {d.pregnant ? <Text style={st.pregnant}>⚠ {t("ev.pregnant")}</Text> : null}
               </View>
               <View style={[st.block, { borderColor: colors.error }]}>
                 <Text style={st.label}>{t("ev.blood_group")}</Text>
@@ -100,7 +99,6 @@ const st = StyleSheet.create({
   identity: { gap: 4 },
   name: { fontSize: 44, fontWeight: "800", color: colors.navy, fontFamily: fonts.heading },
   big: { fontSize: 24, fontWeight: "700", color: colors.navy, lineHeight: 32 },
-  pregnant: { fontSize: 24, fontWeight: "800", color: colors.error },
   block: { borderWidth: 3, borderRadius: 12, padding: space.lg, gap: 6 },
   label: { fontSize: 18, fontWeight: "800", color: colors.slate, textTransform: "uppercase" },
   blood: { fontSize: 64, fontWeight: "900", color: colors.error },

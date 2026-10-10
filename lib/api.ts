@@ -177,7 +177,7 @@ export function useRevokeEmergencyCard(patientId: string) {
 }
 
 export interface EmergencyData {
-  first_name: string; age_years: number; blood_group: string; pregnant: boolean;
+  first_name: string; age_years: number; blood_group: string;
   critical_allergies: { substance: string; reaction: string | null }[];
   critical_conditions: { display: string }[];
   current_medications: { name: string; dosage: string | null }[];

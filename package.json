@@ -13,7 +13,8 @@
     "test:db": "bash scripts/test-db.sh",
     "sync:glossary": "node scripts/sync-glossary.mjs",
     "export:web": "expo export --platform web",
-    "check:functions": "deno check --config supabase/functions/deno.check.json supabase/functions/*/index.ts"
+    "check:functions": "deno check --config supabase/functions/deno.check.json supabase/functions/*/index.ts scripts/ai-eval.ts",
+    "ai:eval": "deno run --config supabase/functions/deno.check.json --allow-net --allow-env --allow-read scripts/ai-eval.ts"
   },
   "dependencies": {
     "@expo/metro-runtime": "~6.1.2",

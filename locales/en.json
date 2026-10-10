@@ -236,7 +236,6 @@
     "title": "Emergency information",
     "age_one": "{{count}} year old",
     "age_other": "{{count}} years old",
-    "pregnant": "Pregnant",
     "blood_group": "Blood group",
     "unknown": "Unknown",
     "allergies": "Severe allergies",

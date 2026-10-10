@@ -181,8 +181,7 @@ begin
                                        where c.patient_id = v_p.id and c.is_critical and c.clinical_status = 'active'), '[]'),
       'current_medications', coalesce((select jsonb_agg(jsonb_build_object('name', m.name, 'dosage', m.dosage_text))
                                        from public.medications m where m.patient_id = v_p.id and m.status = 'active'), '[]'),
-      'emergency_contact', jsonb_build_object('name', v_p.emergency_contact_name, 'phone', v_p.emergency_contact_phone),
-      'pregnant', exists (select 1 from public.pregnancies pg where pg.patient_id = v_p.id and pg.status = 'active')
+      'emergency_contact', jsonb_build_object('name', v_p.emergency_contact_name, 'phone', v_p.emergency_contact_phone)
     )
   );
 end $$;

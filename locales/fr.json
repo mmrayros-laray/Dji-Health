@@ -237,7 +237,6 @@
     "title": "Informations d'urgence",
     "age_one": "{{count}} an",
     "age_other": "{{count}} ans",
-    "pregnant": "Enceinte",
     "blood_group": "Groupe sanguin",
     "unknown": "Inconnu",
     "allergies": "Allergies graves",

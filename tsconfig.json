@@ -16,6 +16,7 @@
     "supabase/functions/emergency-view",
     "supabase/functions/record-assistant",
     "supabase/functions/_shared/anthropic.ts",
-    "supabase/functions/_shared/http.ts"
+    "supabase/functions/_shared/http.ts",
+    "scripts/ai-eval.ts"
   ]
 }
