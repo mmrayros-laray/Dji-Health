@@ -195,7 +195,8 @@ export function useEmergencyView(token: string) {
     queryFn: async (): Promise<EmergencyResult> => {
       const res = await fetch(`${SUPABASE_URL}/functions/v1/emergency-view`, {
         method: "POST",
-        headers: { "Content-Type": "application/json", apikey: SUPABASE_ANON_KEY, Authorization: `Bearer ${SUPABASE_ANON_KEY}` },
+        // apikey only: a publishable key (sb_publishable_…) is not a JWT and must not be sent as a Bearer token
+        headers: { "Content-Type": "application/json", apikey: SUPABASE_ANON_KEY },
         body: JSON.stringify({ token }),
       });
       try {

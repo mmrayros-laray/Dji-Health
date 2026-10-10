@@ -20,9 +20,27 @@ function env(name: string): string {
   return v;
 }
 
+/** Projects with the new API keys expose SUPABASE_PUBLISHABLE_KEYS / SUPABASE_SECRET_KEYS (JSON maps);
+ *  older projects expose SUPABASE_ANON_KEY / SUPABASE_SERVICE_ROLE_KEY. Accept either. */
+function key(legacy: string, modern: string): string {
+  const old = Deno.env.get(legacy);
+  if (old) return old;
+  const raw = Deno.env.get(modern);
+  if (raw) {
+    try {
+      const parsed = JSON.parse(raw);
+      const first = typeof parsed === "string" ? parsed : Object.values(parsed as Record<string, string>)[0];
+      if (first) return first;
+    } catch {
+      return raw;
+    }
+  }
+  throw new Error(`missing env ${legacy} or ${modern}`);
+}
+
 /** Client acting AS the signed-in user: RLS and the audit-logging RPCs apply exactly as in the app. */
 export function userClient(req: Request): SupabaseClient {
-  return createClient(env("SUPABASE_URL"), env("SUPABASE_ANON_KEY"), {
+  return createClient(env("SUPABASE_URL"), key("SUPABASE_ANON_KEY", "SUPABASE_PUBLISHABLE_KEYS"), {
     global: { headers: { Authorization: req.headers.get("Authorization") ?? "" } },
     auth: { persistSession: false, autoRefreshToken: false },
   });
@@ -30,7 +48,7 @@ export function userClient(req: Request): SupabaseClient {
 
 /** Service-role client: only for writes the user may not do (AI cache, rejections, audit entries). */
 export function serviceClient(): SupabaseClient {
-  return createClient(env("SUPABASE_URL"), env("SUPABASE_SERVICE_ROLE_KEY"), {
+  return createClient(env("SUPABASE_URL"), key("SUPABASE_SERVICE_ROLE_KEY", "SUPABASE_SECRET_KEYS"), {
     auth: { persistSession: false, autoRefreshToken: false },
   });
 }
