@@ -2,12 +2,30 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import type { PatientRecord, ScheduleEntry } from "../supabase/functions/_shared/types.ts";
-import { SUPABASE_ANON_KEY, SUPABASE_URL } from "./config";
+import { DEMO_MODE, SUPABASE_ANON_KEY, SUPABASE_URL } from "./config";
+import * as demo from "./demo/engine";
 import { supabase } from "./supabase";
 
 export type { PatientRecord, ScheduleEntry };
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const DEMO_RPC: Record<string, (a: any) => Promise<unknown>> = {
+  get_patient_record: (a) => demo.getRecord(a.p_patient_id ?? null, a.p_reason),
+  get_access_history: (a) => demo.accessHistory(a.p_patient_id ?? null),
+  create_emergency_token: (a) => demo.createEmergencyToken(a.p_patient_id),
+  revoke_emergency_tokens: (a) => demo.revokeEmergencyTokens(a.p_patient_id),
+  my_consents: (a) => demo.myConsents(a.p_patient_id ?? null),
+  create_consent_code: () => demo.createConsentCode(),
+  revoke_consent: (a) => demo.revokeConsent(a.p_consent_id),
+  clinician_patients: () => demo.clinicianPatients(),
+  claim_consent_code: (a) => demo.claimConsentCode(a.p_code, a.p_reason),
+  add_encounter: (a) => demo.addEncounter(a.p_patient_id, a.p_reason, a.p_notes, a.p_observations),
+  admin_ai_rejections: () => demo.rejections(),
+  ministry_dashboard: (a) => demo.dashboard(a.p_region ?? null),
+};
+
 async function rpc<T>(fn: string, args: Record<string, unknown> = {}): Promise<T> {
+  if (DEMO_MODE) return (await DEMO_RPC[fn](args)) as T;
   const { data, error } = await supabase.rpc(fn, args);
   if (error) throw new Error(error.message);
   return data as T;
@@ -38,6 +56,7 @@ export function useSchedule() {
     queryKey: ["schedule"],
     staleTime: 3600_000,
     queryFn: async () => {
+      if (DEMO_MODE) return demo.schedule();
       const { data, error } = await supabase.from("vaccination_schedule").select("*").order("due_age_weeks");
       if (error) throw new Error(error.message);
       return data as ScheduleEntry[];
@@ -51,7 +70,7 @@ export function useProgramParameters() {
     queryKey: ["params"],
     staleTime: 3600_000,
     queryFn: async () => {
-      const { data, error } = await supabase.from("program_parameters").select("*");
+      const { data, error } = DEMO_MODE ? { data: await demo.programParameters(), error: null } : await supabase.from("program_parameters").select("*");
       if (error) throw new Error(error.message);
       return Object.fromEntries((data as ProgramParameter[]).map((p) => [p.key, p])) as Record<string, ProgramParameter>;
     },
@@ -77,6 +96,7 @@ export function useSaveItem(patientId: string) {
   const qc = useQueryClient();
   return useMutation({
     mutationFn: async ({ section, id, values }: { section: EditableSection; id?: string; values: Record<string, unknown> }) => {
+      if (DEMO_MODE) return demo.saveItem(patientId, section, id, values);
       const q = id
         ? supabase.from(section).update(values).eq("id", id).eq("source", "patient")
         : supabase.from(section).insert({ ...values, patient_id: patientId });
@@ -91,6 +111,7 @@ export function useDeleteItem() {
   const qc = useQueryClient();
   return useMutation({
     mutationFn: async ({ section, id }: { section: EditableSection | "documents"; id: string }) => {
+      if (DEMO_MODE) return demo.deleteItem(section, id);
       const { error } = await supabase.from(section).delete().eq("id", id).eq("source", "patient");
       if (error) throw new Error(error.message);
     },
@@ -103,6 +124,7 @@ export function useUploadDocument(patientId: string) {
   const qc = useQueryClient();
   return useMutation({
     mutationFn: async (file: { uri: string; name: string; mimeType: string; size?: number; title: string; kind: string; webFile?: Blob }) => {
+      if (DEMO_MODE) return demo.uploadDocument(patientId, file);
       const safe = file.name.replace(/[^\w.-]+/g, "_").slice(-80);
       const path = `${patientId}/${Date.now().toString(36)}-${safe}`;
       const body = file.webFile ?? (await (await fetch(file.uri)).arrayBuffer());
@@ -121,6 +143,7 @@ export function useUploadDocument(patientId: string) {
 }
 
 export async function documentUrl(path: string): Promise<string> {
+  if (DEMO_MODE) return demo.documentUrl(path);
   const { data, error } = await supabase.storage.from("documents").createSignedUrl(path, 300);
   if (error) throw new Error(error.message);
   return data.signedUrl;
@@ -138,8 +161,10 @@ export function useEmergencyCard(patientId: string | undefined) {
     queryFn: async () => {
       const raw = await AsyncStorage.getItem(cardKey(patientId!)).catch(() => null);
       const stored = raw ? (JSON.parse(raw) as StoredCard) : null;
-      const { data, error } = await supabase.from("emergency_tokens").select("id, created_at, expires_at, revoked_at")
-        .eq("patient_id", patientId!).order("created_at", { ascending: false });
+      const { data, error } = DEMO_MODE
+        ? { data: await demo.emergencyTokens(patientId!), error: null }
+        : await supabase.from("emergency_tokens").select("id, created_at, expires_at, revoked_at")
+            .eq("patient_id", patientId!).order("created_at", { ascending: false });
       if (error) throw new Error(error.message);
       const active = (data ?? []).find((t) => !t.revoked_at && new Date(t.expires_at) > new Date());
       const card = stored && active && stored.id === active.id ? stored : null;
@@ -193,6 +218,7 @@ export function useEmergencyView(token: string) {
     gcTime: 0,
     retry: false,
     queryFn: async (): Promise<EmergencyResult> => {
+      if (DEMO_MODE) return (await demo.emergencyLookup(token)) as EmergencyResult;
       const res = await fetch(`${SUPABASE_URL}/functions/v1/emergency-view`, {
         method: "POST",
         // apikey only: a publishable key (sb_publishable_…) is not a JWT and must not be sent as a Bearer token
@@ -281,6 +307,7 @@ export function useSummary(language: string, patientId?: string) {
     staleTime: 3600_000,
     retry: false,
     queryFn: async () => {
+      if (DEMO_MODE) return (await demo.summary(language as "fr")) as SummaryResponse;
       const { data, error } = await supabase.functions.invoke<SummaryResponse>("summarize-record", {
         body: { language, patient_id: patientId ?? null },
       });
@@ -298,6 +325,7 @@ export interface AssistantReply {
 export function useAssistant() {
   return useMutation({
     mutationFn: async ({ messages, language }: { messages: { role: "user" | "assistant"; content: string }[]; language: string }) => {
+      if (DEMO_MODE) return (await demo.assistant(messages, language)) as AssistantReply;
       const { data, error } = await supabase.functions.invoke<AssistantReply>("record-assistant", { body: { messages, language } });
       if (error) throw new Error(error.message);
       return data!;

@@ -4,8 +4,11 @@ import { useTranslation } from "react-i18next";
 import { ActivityIndicator, Pressable, StyleSheet, Text, View } from "react-native";
 import { LanguageSwitcher } from "../../components/LanguageSwitcher";
 import { Screen } from "../../components/Screen";
-import { Body, Icon, Notice, Small, type IconName } from "../../components/ui";
+import { Body, Button, Icon, Notice, Small, type IconName } from "../../components/ui";
 import { useAuth } from "../../lib/auth";
+import { DEMO_MODE } from "../../lib/config";
+import { resetDemo } from "../../lib/demo/engine";
+import { queryClient } from "../../lib/queryClient";
 import { DEMO_ACCOUNTS, homeFor } from "../../lib/demoAccounts";
 import { colors, radius, space, type } from "../../lib/theme";
 
@@ -14,6 +17,7 @@ export default function SignIn() {
   const { session, role, signInDemo } = useAuth();
   const [busy, setBusy] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [resetDone, setResetDone] = useState(false);
 
   if (session && role) return <Redirect href={homeFor(role) as never} />;
 
@@ -53,6 +57,12 @@ export default function SignIn() {
         ))}
       </View>
       <Small muted>{t("signin.note")}</Small>
+      {DEMO_MODE ? (
+        <>
+          <Button variant="ghost" icon="restore" label={t("preview.reset")} onPress={() => { resetDemo(); queryClient.clear(); setResetDone(true); }} />
+          {resetDone ? <Notice tone="success" icon="check-circle">{t("preview.reset_done")}</Notice> : null}
+        </>
+      ) : null}
     </Screen>
   );
 }

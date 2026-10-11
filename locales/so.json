@@ -443,5 +443,11 @@
     "tap_point": "Taabo bar si aad u akhrido qiimaha.",
     "show_table": "Tus shaxda",
     "hide_table": "Qari shaxda"
+  },
+  "preview": {
+    "banner": "Muuqaal offline ah — wax walba waxay ku jiraan browser-kan",
+    "qr_note": "Muuqaal: koodhka QR wuxuu shaqeeyaa nooca la daabacay. Halkan, taabo \"Eeg waxa shaqaalaha caafimaadku arko\".",
+    "reset": "Dib u bilow muuqaalka",
+    "reset_done": "Muuqaalka dib ayaa loo bilaabay: xogta tijaabada asalka ah."
   }
 }

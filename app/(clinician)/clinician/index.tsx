@@ -7,7 +7,7 @@ import { Screen } from "../../../components/Screen";
 import { SignOutButton } from "../../../components/SignOutButton";
 import { Body, Button, Card, Field, H2, Icon, Notice, Row, Skeleton, Small } from "../../../components/ui";
 import { useClaimConsent, useClinicianPatients } from "../../../lib/api";
-import { CONSENT_QR_PREFIX } from "../../../lib/config";
+import { CONSENT_QR_PREFIX, DEMO_MODE } from "../../../lib/config";
 import { formatDateTime } from "../../../lib/format";
 import { todayIso } from "../../../lib/hooks";
 import { colors } from "../../../lib/theme";
@@ -45,7 +45,7 @@ export default function ClinicianHome() {
         </Field>
         <Row>
           <Button icon="lock-open-check-outline" label={t("clinician.open_record")} onPress={() => submit()} disabled={code.replace(/\W/g, "").length < 8 || !reason.trim()} loading={claim.isPending} />
-          <Button variant="secondary" icon="qrcode-scan" label={t("clinician.scan")} onPress={() => setScanning(true)} />
+          {!DEMO_MODE ? <Button variant="secondary" icon="qrcode-scan" label={t("clinician.scan")} onPress={() => setScanning(true)} /> : null}
         </Row>
         {scanning ? (
           <CodeScanner onClose={() => setScanning(false)} onCode={(data) => {

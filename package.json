@@ -15,7 +15,8 @@
     "export:web": "expo export --platform web",
     "check:functions": "deno check --config supabase/functions/deno.check.json supabase/functions/*/index.ts scripts/ai-eval.ts",
     "ai:eval": "deno run --config supabase/functions/deno.check.json --allow-net --allow-env --allow-read scripts/ai-eval.ts",
-    "build:icons": "node scripts/build-icons.mjs"
+    "build:icons": "node scripts/build-icons.mjs",
+    "build:preview": "EXPO_PUBLIC_DEMO_MODE=1 expo export --clear --platform web --output-dir dist-preview && node scripts/build-preview.mjs dist-preview dist-preview/DjiHealth-preview.html"
   },
   "dependencies": {
     "@expo/metro-runtime": "~6.1.2",

@@ -442,5 +442,11 @@
     "tap_point": "Tap a point to read its value.",
     "show_table": "Show table",
     "hide_table": "Hide table"
+  },
+  "preview": {
+    "banner": "Offline preview — everything stays in this browser",
+    "qr_note": "Preview: the QR code works in the deployed version. Here, tap \"See what the health worker sees\".",
+    "reset": "Reset the preview",
+    "reset_done": "Preview reset: original demonstration data."
   }
 }

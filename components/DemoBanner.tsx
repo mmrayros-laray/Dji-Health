@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { StyleSheet, Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { DEMO_MODE } from "../lib/config";
 import { colors, type } from "../lib/theme";
 import { Icon } from "./ui";
 
@@ -11,7 +12,7 @@ export function DemoBanner() {
   return (
     <View style={[st.banner, { paddingTop: insets.top + 6 }]} accessibilityRole="text" accessibilityLabel={t("demo.banner")}>
       <Icon name="flask-outline" size={18} color={colors.navy} />
-      <Text style={st.text}>{t("demo.banner")}</Text>
+      <Text style={st.text}>{t("demo.banner")}{DEMO_MODE ? ` · ${t("preview.banner")}` : ""}</Text>
     </View>
   );
 }

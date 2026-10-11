@@ -7,7 +7,7 @@ import QRCode from "react-native-qrcode-svg";
 import { Screen } from "../../components/Screen";
 import { Badge, Body, Button, Card, H2, Icon, Notice, Row, Skeleton, Small } from "../../components/ui";
 import { useAccessHistory, useCreateEmergencyCard, useEmergencyCard, useRecord, useRevokeEmergencyCard } from "../../lib/api";
-import { appUrl } from "../../lib/config";
+import { appUrl, DEMO_MODE } from "../../lib/config";
 import { formatDate, formatDateTime } from "../../lib/format";
 import { colors, fonts, radius, space } from "../../lib/theme";
 
@@ -72,10 +72,11 @@ export default function EmergencyCard() {
 
           <Row>
             <Button icon={card ? "refresh" : "qrcode-plus"} label={card ? t("emergency.regenerate") : t("emergency.generate")} onPress={() => create.mutate()} loading={create.isPending} />
-            {card ? <Button variant="secondary" icon="printer-outline" label={t("emergency.print")} onPress={print} /> : null}
+            {card && !DEMO_MODE ? <Button variant="secondary" icon="printer-outline" label={t("emergency.print")} onPress={print} /> : null}
             {card ? <Button variant="secondary" icon="eye-outline" label={t("emergency.preview")} onPress={() => router.push(`/emergency/${card.token}`)} /> : null}
             {card || cardQ.data?.hasActiveElsewhere ? <Button variant="danger" icon="card-remove-outline" label={t("emergency.revoke")} onPress={() => revoke.mutate()} loading={revoke.isPending} /> : null}
           </Row>
+          {card && DEMO_MODE ? <Notice tone="info" icon="information-outline">{t("preview.qr_note")}</Notice> : null}
           {create.isError ? <Notice tone="error" icon="alert-circle-outline">{create.error.message}</Notice> : null}
 
           <Card>

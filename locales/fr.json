@@ -443,5 +443,11 @@
     "tap_point": "Touchez un point pour lire la valeur.",
     "show_table": "Afficher le tableau",
     "hide_table": "Masquer le tableau"
+  },
+  "preview": {
+    "banner": "Aperçu hors ligne — tout reste dans ce navigateur",
+    "qr_note": "Aperçu : le code QR fonctionne dans la version déployée. Ici, touchez « Voir ce que voit le soignant ».",
+    "reset": "Réinitialiser l'aperçu",
+    "reset_done": "Aperçu réinitialisé : données de démonstration d'origine."
   }
 }

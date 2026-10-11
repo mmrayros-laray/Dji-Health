@@ -3,7 +3,9 @@ import { Platform } from "react-native";
 
 export const SUPABASE_URL = process.env.EXPO_PUBLIC_SUPABASE_URL ?? "";
 export const SUPABASE_ANON_KEY = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY ?? "";
-export const isConfigured = Boolean(SUPABASE_URL && SUPABASE_ANON_KEY);
+/** Offline preview: an in-browser engine replaces Supabase (lib/demo/engine.ts). Synthetic data only. */
+export const DEMO_MODE = process.env.EXPO_PUBLIC_DEMO_MODE === "1";
+export const isConfigured = DEMO_MODE || Boolean(SUPABASE_URL && SUPABASE_ANON_KEY);
 
 /** Shared password of the seeded demo accounts (public by design: synthetic data only). */
 export const DEMO_PASSWORD = process.env.EXPO_PUBLIC_DEMO_PASSWORD ?? "DjiHealth-demo-2026";

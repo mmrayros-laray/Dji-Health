@@ -14,10 +14,11 @@ export function SourceChips({ refs, refMap, record }: { refs: string[]; refMap: 
   const chips = refs.flatMap((ref) => {
     const target = refMap[ref];
     if (!target) return [];
-    const key = `${target.section}:${target.id}`;
+    const label = labelFor(target, record, term, t);
+    const key = `${target.section}:${label}`; // one chip per distinct item (a pregnancy and its visits share a page)
     if (seen.has(key)) return [];
     seen.add(key);
-    return [{ ref, target, label: labelFor(target, record, term, t) }];
+    return [{ ref, target, label }];
   });
   if (!chips.length) return null;
   return (
